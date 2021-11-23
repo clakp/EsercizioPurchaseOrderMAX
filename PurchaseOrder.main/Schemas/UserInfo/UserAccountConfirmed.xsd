@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UserAccountConfirmed" xmlns:tns="http://www.example.org/UserAccountConfirmed" elementFormDefault="qualified" xmlns:Q1="http://www.example.org/UserAccount">
+
+    <import namespace="http://www.example.org/UserAccount"></import>
+    <element name="Confirmed" type="tns:ConfirmedType"></element>
+    
+    <complexType name="ConfirmedType">
+    	<sequence>
+    		<element name="UserAccount" type="Q1:AccountType"></element>
+    		<element name="ConfirmedMessage" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

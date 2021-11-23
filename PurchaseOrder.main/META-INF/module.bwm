@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_2hDRgExREey4XYCb6DIAKA" targetNamespace="http://tns.tibco.com/bw/composite/PurchaseOrder.main" name="PurchaseOrder.main" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_NED4gExfEey4XYCb6DIAKA" name="registration" promote="ComponentRegistration/registration">
+    <sca:interface.wsdl xmi:id="_NEIJ8ExfEey4XYCb6DIAKA" interface="http://xmlns.example.com/20211123141352PLT#wsdl.interface(registration)" scaext:wsdlLocation="../Processes/purchaseorder/main/Registration.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_NER68ExfEey4XYCb6DIAKA" name="RestService" path="/registration" docBasePath="http://localhost:7777/PurchaseOrder.main" docResourcePath="Registration" basePath="/" connector="purchaseorder.main.Registration" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/purchaseorder.main.Registration-Registration.json">
+      <operation xmi:id="_NEWMYExfEey4XYCb6DIAKA" operationName="post" nickname="post-registration" httpMethod="POST" notes="postRegistration" responseStyle="element" requestStyle="element" outputPartName="Response">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_NFrpIExfEey4XYCb6DIAKA"/>
+      <advancedConfig xmi:id="_NEUXMExfEey4XYCb6DIAKA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_NEWMYUxfEey4XYCb6DIAKA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_3CNd0ExREey4XYCb6DIAKA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3CWAsExREey4XYCb6DIAKA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3CZEAExREey4XYCb6DIAKA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3CcHUExREey4XYCb6DIAKA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3CfKoExREey4XYCb6DIAKA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3Chm4ExREey4XYCb6DIAKA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3CkDIExREey4XYCb6DIAKA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3CmfYExREey4XYCb6DIAKA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3CpisExREey4XYCb6DIAKA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_ND8jwExfEey4XYCb6DIAKA" name="ComponentRegistration" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ND8jwUxfEey4XYCb6DIAKA" processName="purchaseorder.main.Registration"/>
+    <sca:service xmi:id="_NEAOIExfEey4XYCb6DIAKA" name="registration">
+      <sca:interface.wsdl xmi:id="_NEBcQExfEey4XYCb6DIAKA" interface="http://xmlns.example.com/20211123141352PLT#wsdl.interface(registration)" scaext:wsdlLocation="../Processes/purchaseorder/main/Registration.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

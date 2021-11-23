@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UsernameCount" xmlns:tns="http://www.example.org/UsernameCount" elementFormDefault="qualified">
+
+    <element name="UsernameCount" type="tns:UsernameCountType"></element>
+    
+    <complexType name="UsernameCountType">
+    	<sequence>
+    		<element name="Count" type="integer"></element>
+    	</sequence>
+    </complexType>
+</schema>

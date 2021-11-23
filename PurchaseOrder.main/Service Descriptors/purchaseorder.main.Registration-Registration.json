@@ -1,0 +1,138 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Registration",
+    "description" : "Registration service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/registration" : {
+      "post" : {
+        "summary" : "postRegistration",
+        "description" : "postRegistration",
+        "operationId" : "post-registration",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Account"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Confirmed to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Confirmed"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Account" : {
+      "type" : "object",
+      "properties" : {
+        "Registry" : {
+          "$ref" : "#/definitions/RegistryType"
+        }
+      }
+    },
+    "PaymentMethodType" : {
+      "type" : "object",
+      "properties" : {
+        "CreditCard" : {
+          "type" : "integer"
+        },
+        "DebitCard" : {
+          "type" : "integer"
+        },
+        "Paypal" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RegistryType" : {
+      "type" : "object",
+      "properties" : {
+        "PersonalData" : {
+          "$ref" : "#/definitions/PersonalDataType"
+        },
+        "PaymentMethod" : {
+          "$ref" : "#/definitions/PaymentMethodType"
+        },
+        "Address" : {
+          "$ref" : "#/definitions/AddressType"
+        }
+      }
+    },
+    "PersonalDataType" : {
+      "type" : "object",
+      "properties" : {
+        "IDUser" : {
+          "type" : "string"
+        },
+        "FirstName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "Username" : {
+          "type" : "string"
+        },
+        "DateOfBirth" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "TaxCode" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Confirmed" : {
+      "type" : "object",
+      "required" : [ "UserAccount" ],
+      "properties" : {
+        "UserAccount" : {
+          "$ref" : "#/definitions/AccountType"
+        },
+        "ConfirmedMessage" : {
+          "type" : "string"
+        }
+      }
+    },
+    "AddressType" : {
+      "type" : "object",
+      "properties" : {
+        "Street" : {
+          "type" : "string"
+        },
+        "City" : {
+          "type" : "string"
+        },
+        "ZipCode" : {
+          "type" : "string"
+        },
+        "Country" : {
+          "type" : "string"
+        }
+      }
+    },
+    "AccountType" : {
+      "type" : "object",
+      "properties" : {
+        "Registry" : {
+          "$ref" : "#/definitions/RegistryType"
+        }
+      }
+    }
+  }
+}

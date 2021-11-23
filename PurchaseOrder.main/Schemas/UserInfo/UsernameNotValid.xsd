@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UsernameNotValid" xmlns:tns="http://www.example.org/UsernameNotValid" elementFormDefault="qualified">
+
+    <element name="UsernameNotValid" type="tns:UsernameNotValidType"></element>
+    
+    <complexType name="UsernameNotValidType">
+    	<sequence>
+    		<element name="NotValid" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>
