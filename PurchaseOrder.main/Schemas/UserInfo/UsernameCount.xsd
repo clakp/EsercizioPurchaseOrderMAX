@@ -5,7 +5,7 @@
     
     <complexType name="UsernameCountType">
     	<sequence>
-    		<element name="Count" type="integer"></element>
+    		<element name="Count" type="integer" minOccurs="0" maxOccurs="unbounded"></element>
     	</sequence>
     </complexType>
 </schema>

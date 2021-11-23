@@ -16,6 +16,7 @@
     xmlns:ns15="http://www.tibco.com/namespaces/tnt/plugins/jdbc+fabc1ef9-a421-4781-a505-932ed69080fa+output"
     xmlns:ns16="http://www.example.org/UsernameNotValid"
     xmlns:ns17="http://www.tibco.com/pe/WriteToLogActivitySchema"
+    xmlns:ns18="http://www.tibco.com/namespaces/tnt/plugins/jdbc+c9434873-7e8b-4a6c-adb0-f4e948941b4a+input"
     xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/jdbc+4695f9e9-d9ab-49b3-9a95-8807c790526a+output"
     xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.JDBCQuery"
     xmlns:ns4="http://www.example.org/UsernameCount"
@@ -485,41 +486,9 @@
                                 <sequence>
                                     <element maxOccurs="1" minOccurs="1"
                                     name="id" type="int"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="firstname" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="lastname" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="username" nillable="false" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="dateofbirth" type="date"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="taxcode" type="string"/>
                                 </sequence>
                             </complexType>
                         </element>
-                    </sequence>
-                </complexType>
-            </element>
-        </schema>
-        <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+003ca195-d09f-4b64-ade4-3696cbbf196e+input"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+003ca195-d09f-4b64-ade4-3696cbbf196e+input">
-            <element name="jdbcUpdateActivityInput">
-                <complexType>
-                    <sequence>
-                        <element maxOccurs="1" minOccurs="1"
-                            name="ID_USER" nillable="true" type="string"/>
-                        <element maxOccurs="1" minOccurs="1"
-                            name="CreditCard" nillable="true" type="int"/>
-                        <element maxOccurs="1" minOccurs="1"
-                            name="DebitCard" nillable="true" type="int"/>
-                        <element maxOccurs="1" minOccurs="1"
-                            name="Paypal" nillable="true" type="string"/>
-                        <element maxOccurs="1" minOccurs="0"
-                            name="ServerTimeZone" type="string"/>
-                        <element maxOccurs="1" minOccurs="0"
-                            name="timeout" type="long"/>
                     </sequence>
                 </complexType>
             </element>
@@ -557,10 +526,10 @@
                                     name="id_user" nillable="false" type="int"/>
                                     <element maxOccurs="1" minOccurs="0"
                                     name="creditcard"
-                                    nillable="false" type="int"/>
+                                    nillable="false" type="integer"/>
                                     <element maxOccurs="1" minOccurs="0"
                                     name="debitcard"
-                                    nillable="false" type="int"/>
+                                    nillable="false" type="integer"/>
                                     <element maxOccurs="1" minOccurs="0"
                                     name="paypal" nillable="false" type="string"/>
                                 </sequence>
@@ -613,6 +582,28 @@
             </xs:complexType>
             <xs:element name="ActivityInput" type="tns:LogParametersType"/>
         </xs:schema>
+        <schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+c9434873-7e8b-4a6c-adb0-f4e948941b4a+input"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+c9434873-7e8b-4a6c-adb0-f4e948941b4a+input">
+            <element name="jdbcUpdateActivityInput">
+                <complexType>
+                    <sequence>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="id_user" nillable="true" type="int"/>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="creditcard" nillable="true" type="integer"/>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="debitcard" nillable="true" type="integer"/>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="paypal" nillable="true" type="string"/>
+                        <element maxOccurs="1" minOccurs="0"
+                            name="ServerTimeZone" type="string"/>
+                        <element maxOccurs="1" minOccurs="0"
+                            name="timeout" type="long"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="Kripta"
         createdOn="Tue Nov 23 14:18:10 CET 2021" description=""
@@ -900,43 +891,6 @@
                                     x="388"
                                     xsi:type="notation:Bounds" y="123"/>
                                     </children>
-                                    <children type="4002 bw.jdbc.update">
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <children type="4017">
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
-                                    <layoutConstraint
-                                    height="40" width="40"
-                                    x="471"
-                                    xsi:type="notation:Bounds" y="123"/>
-                                    </children>
                                     <children type="4002 bw.jdbc.JDBCQuery">
                                     <children type="4017">
                                     <styles
@@ -968,7 +922,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="558"
@@ -1005,10 +959,47 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="647"
+                                    xsi:type="notation:Bounds" y="123"/>
+                                    </children>
+                                    <children type="4002 bw.jdbc.update">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="475"
                                     xsi:type="notation:Bounds" y="123"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1249,8 +1240,8 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1260,36 +1251,14 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -1301,6 +1270,28 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <bendpoints points="[25, 0, -58, 0]$[59, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
@@ -1327,6 +1318,8 @@
             namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns7"/>
         <tibex:namespaceItem
             namespace="http://www.example.org/UsernameNotValid" prefix="tns8"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+c9434873-7e8b-4a6c-adb0-f4e948941b4a+input" prefix="tns9"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/UserAccount"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/UsernameCount"/>
@@ -1371,12 +1364,6 @@
         <bpws:variable element="ns9:resultSet" name="QueryPD" sca-bpel:internal="true"/>
         <bpws:variable element="ns3:ActivityErrorData"
             name="_error_QueryPD" sca-bpel:internal="true"/>
-        <bpws:variable element="ns10:jdbcUpdateActivityInput"
-            name="InsertPM-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns6:jdbcUpdateActivityOutput"
-            name="InsertPM" sca-bpel:internal="true"/>
-        <bpws:variable element="ns7:ActivityErrorData"
-            name="_error_InsertPM" sca-bpel:internal="true"/>
         <bpws:variable element="ns11:jdbcQueryActivityInput"
             name="QueryPM-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns12:resultSet" name="QueryPM" sca-bpel:internal="true"/>
@@ -1391,6 +1378,12 @@
         <bpws:variable element="ns16:UsernameNotValid"
             name="Throw-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns17:ActivityInput" name="Log-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns18:jdbcUpdateActivityInput"
+            name="JDBCUpdate-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:jdbcUpdateActivityOutput"
+            name="JDBCUpdate" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:ActivityErrorData"
+            name="_error_JDBCUpdate" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1457,10 +1450,10 @@
                 <bpws:link name="MapperToEnd" tibex:linkType="SUCCESSWITHCONDITION"/>
                 <bpws:link name="MapperToThrow" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                 <bpws:link name="JDBCUpdateToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="JDBCQuery1ToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="JDBCUpdateToEnd1" tibex:linkType="SUCCESS"/>
                 <bpws:link name="JDBCQuery1ToEnd1" tibex:linkType="SUCCESS"/>
                 <bpws:link name="InsertAdToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="QueryPDToQueryPM" tibex:linkType="SUCCESS"/>
+                <bpws:link name="JDBCUpdateToQueryPM" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1514,7 +1507,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+4695f9e9-d9ab-49b3-9a95-8807c790526a+input&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns9:jdbcQueryActivityInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+4695f9e9-d9ab-49b3-9a95-8807c790526a+input&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:jdbcQueryActivityInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1579,7 +1572,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/UserAccount&quot; xmlns:tns1=&quot;http://www.example.org/UsernameCount&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:template name=&quot;Mapper-input&quot; match=&quot;/&quot;>&lt;tns1:UsernameCount>&lt;xsl:for-each select=&quot;$JDBCQuery/Record&quot;>&lt;xsl:choose>&lt;xsl:when test=&quot;username!=$Start/tns:Registry/tns:PersonalData/tns:Username&quot;>&lt;tns1:Count>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/tns1:Count>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns1:Count>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/tns1:Count>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:for-each>&lt;/tns1:UsernameCount>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/UserAccount&quot; xmlns:tns1=&quot;http://www.example.org/UsernameCount&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:template name=&quot;Mapper-input&quot; match=&quot;/&quot;>&lt;tns1:UsernameCount>&lt;xsl:for-each select=&quot;$JDBCQuery/Record&quot;>&lt;xsl:choose>&lt;xsl:when test=&quot;username!=$Start/tns:Registry/tns:PersonalData/tns:Username or username=&amp;quot;&amp;quot;&quot;>&lt;tns1:Count>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/tns1:Count>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns1:Count>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/tns1:Count>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:for-each>&lt;/tns1:UsernameCount>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1667,7 +1660,7 @@
                         <bpws:target linkName="JDBCUpdateToEnd"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="JDBCQuery1ToEnd"/>
+                        <bpws:source linkName="QueryPDToQueryPM"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1684,73 +1677,13 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="select * from &quot;ecommerce&quot;.PersonalData&#xa;where username=?&#xa;"
+                                    sqlStatement="select id from &quot;ecommerce&quot;.PersonalData&#xa;where username=?&#xa;limit 1&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <PreparedParameters
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="username"/>
                                     <columnMetadata columnIndex="1"
                                     columnName="id" dataType="4" typeName="serial"/>
-                                    <columnMetadata columnIndex="2"
-                                    columnName="firstname"
-                                    dataType="12" typeName="varchar"/>
-                                    <columnMetadata columnIndex="3"
-                                    columnName="lastname"
-                                    dataType="12" typeName="varchar"/>
-                                    <columnMetadata columnIndex="4"
-                                    columnName="username"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="varchar"/>
-                                    <columnMetadata columnIndex="5"
-                                    columnName="dateofbirth"
-                                    dataType="91" typeName="date"/>
-                                    <columnMetadata columnIndex="6"
-                                    columnName="taxcode"
-                                    dataType="12" typeName="varchar"/>
-                                    </value>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="InsertPM-input"
-                    name="InsertPM" outputVariable="InsertPM"
-                    tibex:xpdlId="003ca195-d09f-4b64-ade4-3696cbbf196e" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="JDBCQuery1ToEnd"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="JDBCUpdateToEnd1"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+003ca195-d09f-4b64-ade4-3696cbbf196e+input&quot; xmlns:tns=&quot;http://www.example.org/UserAccount&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;QueryPD&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JDBCUpdate-input&quot; match=&quot;/&quot;>&lt;tns4:jdbcUpdateActivityInput>&lt;ID_USER>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($QueryPD/Record/id)&quot;>&lt;xsl:value-of select=&quot;$QueryPD/Record/id&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/ID_USER>&lt;CreditCard>&lt;xsl:value-of select=&quot;xsd:int($Start/tns:Registry/tns:PaymentMethod/tns:CreditCard)&quot;/>&lt;/CreditCard>&lt;DebitCard>&lt;xsl:value-of select=&quot;xsd:int($Start/tns:Registry/tns:PaymentMethod/tns:DebitCard)&quot;/>&lt;/DebitCard>&lt;Paypal>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($Start/tns:Registry/tns:PaymentMethod/tns:Paypal)&quot;>&lt;xsl:value-of select=&quot;$Start/tns:Registry/tns:PaymentMethod/tns:Paypal&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/Paypal>&lt;/tns4:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity
-                            activityTypeID="bw.jdbc.update"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCUpdateActivity"/>
-                                    <value
-                                    sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="insert into &quot;ecommerce&quot;.paymentmethods(ID_USER, CreditCard, DebitCard, Paypal)&#xd;&#xa;values(?, ?, ?, ?)"
-                                    timeout="10" xsi:type="jdbcPalette:JDBCUpdateActivity">
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="ID_USER"/>
-                                    <PreparedParameters DataType="4"
-                                    DataTypeDisplayValue="INTEGER" ParameterName="CreditCard"/>
-                                    <PreparedParameters DataType="4"
-                                    DataTypeDisplayValue="INTEGER" ParameterName="DebitCard"/>
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="Paypal"/>
                                     </value>
                                 </properties>
                             </activityConfig>
@@ -1763,7 +1696,7 @@
                     name="QueryPM" outputVariable="QueryPM"
                     tibex:xpdlId="e659dadf-ca96-438d-b39b-90aae24a6f2b" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="JDBCUpdateToEnd1"/>
+                        <bpws:target linkName="JDBCUpdateToQueryPM"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="JDBCQuery1ToEnd1"/>
@@ -1795,12 +1728,12 @@
                                     status="OptionalElement" typeName="int4"/>
                                     <columnMetadata columnIndex="3"
                                     columnName="creditcard"
-                                    dataType="4"
-                                    status="OptionalElement" typeName="int4"/>
+                                    dataType="-5"
+                                    status="OptionalElement" typeName="int8"/>
                                     <columnMetadata columnIndex="4"
                                     columnName="debitcard"
-                                    dataType="4"
-                                    status="OptionalElement" typeName="int4"/>
+                                    dataType="-5"
+                                    status="OptionalElement" typeName="int8"/>
                                     <columnMetadata columnIndex="5"
                                     columnName="paypal"
                                     dataType="12"
@@ -1854,6 +1787,52 @@
                                     <PreparedParameters
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="country"/>
+                                    </value>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="JDBCUpdate-input" name="JDBCUpdate"
+                    outputVariable="JDBCUpdate"
+                    tibex:xpdlId="c9434873-7e8b-4a6c-adb0-f4e948941b4a" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="QueryPDToQueryPM"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="JDBCUpdateToQueryPM"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+c9434873-7e8b-4a6c-adb0-f4e948941b4a+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns=&quot;http://www.example.org/UserAccount&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;QueryPD&quot;/>&lt;xsl:template name=&quot;JDBCUpdate-input&quot; match=&quot;/&quot;>&lt;tns9:jdbcUpdateActivityInput>&lt;id_user>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($QueryPD/Record[1]/id)&quot;>&lt;xsl:value-of select=&quot;$QueryPD/Record[1]/id&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/id_user>&lt;creditcard>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($Start/tns:Registry/tns:PaymentMethod/tns:CreditCard)&quot;>&lt;xsl:value-of select=&quot;$Start/tns:Registry/tns:PaymentMethod/tns:CreditCard&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/creditcard>&lt;debitcard>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($Start/tns:Registry/tns:PaymentMethod/tns:DebitCard)&quot;>&lt;xsl:value-of select=&quot;$Start/tns:Registry/tns:PaymentMethod/tns:DebitCard&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/debitcard>&lt;paypal>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($Start/tns:Registry/tns:PaymentMethod/tns:Paypal)&quot;>&lt;xsl:value-of select=&quot;$Start/tns:Registry/tns:PaymentMethod/tns:Paypal&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/paypal>&lt;/tns9:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.jdbc.update"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCUpdateActivity"/>
+                                    <value
+                                    sharedResourceProperty="jdbcProperty"
+                                    sqlStatement="insert into &quot;ecommerce&quot;.PaymentMethod(ID_USER, CreditCard, DebitCard, Paypal)&#xa;values(?, ?, ?, ?)"
+                                    timeout="10" xsi:type="jdbcPalette:JDBCUpdateActivity">
+                                    <PreparedParameters DataType="4"
+                                    DataTypeDisplayValue="INTEGER" ParameterName="id_user"/>
+                                    <PreparedParameters
+                                    DataType="-5"
+                                    DataTypeDisplayValue="BIGINT" ParameterName="creditcard"/>
+                                    <PreparedParameters
+                                    DataType="-5"
+                                    DataTypeDisplayValue="BIGINT" ParameterName="debitcard"/>
+                                    <PreparedParameters
+                                    DataType="12"
+                                    DataTypeDisplayValue="VARCHAR" ParameterName="paypal"/>
                                     </value>
                                 </properties>
                             </activityConfig>

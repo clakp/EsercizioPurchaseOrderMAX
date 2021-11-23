@@ -21,7 +21,6 @@
 
     <complexType name="PersonalDataType">
     	<sequence>
-    		<element name="IDUser" type="string" minOccurs="0" maxOccurs="1"></element>
     		<element name="FirstName" type="string" minOccurs="0" maxOccurs="1"></element>
     		<element name="LastName" type="string" minOccurs="0" maxOccurs="1"></element>
             <element name="Username" type="string" minOccurs="0" maxOccurs="1"></element>
@@ -33,24 +32,10 @@
     <complexType name="PaymentMethodType">
     	<sequence>
     		<element name="CreditCard" minOccurs="0"
-    			maxOccurs="1">
-    			<simpleType>
-    				<restriction base="integer">
-    					<whiteSpace value="collapse"></whiteSpace>
-    					<minInclusive value="16"></minInclusive>
-    					<maxInclusive value="16"></maxInclusive>
-    				</restriction>
-    			</simpleType>
+    			maxOccurs="1" type="integer">
     		</element>
     		<element name="DebitCard" minOccurs="0"
-    			maxOccurs="1">
-    			<simpleType>
-    				<restriction base="integer">
-    					<minInclusive value="13"></minInclusive>
-    					<maxInclusive value="19"></maxInclusive>
-    					<whiteSpace value="collapse"></whiteSpace>
-    				</restriction>
-    			</simpleType>
+    			maxOccurs="1" type="integer">
     		</element>
     		<element name="Paypal" minOccurs="0"
     			maxOccurs="1">
