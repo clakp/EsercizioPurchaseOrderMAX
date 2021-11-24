@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/totalprice" xmlns:tns="http://www.example.org/totalprice" elementFormDefault="qualified">
+
+    <element name="variousprices" type="tns:variouspricesType"></element>
+    
+    <complexType name="variouspricesType">
+    	<sequence>
+    		<element name="prices" type="decimal" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>

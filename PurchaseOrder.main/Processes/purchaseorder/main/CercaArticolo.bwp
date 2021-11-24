@@ -15,6 +15,7 @@
     xmlns:ns15="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonParser"
     xmlns:ns16="activity.jsonRender.output+1b7b9300-77df-48ba-9f72-70abe4db4350+ActivityOutputType"
     xmlns:ns17="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender"
+    xmlns:ns18="http://tns.tibco.com/bw/palette/internal/activityerror+de339e91-15a4-47b6-832d-7699b275ea4c"
     xmlns:ns2="http://www.example.org/Storage"
     xmlns:ns3="http://www.example.org/ProductQuery"
     xmlns:ns4="http://www.example.org/LackOfGoods"
@@ -509,6 +510,18 @@
             <complexType name="ActivityErrorDataType">
                 <choice>
                     <element maxOccurs="1" minOccurs="0" ref="Q1:JSONRenderException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+de339e91-15a4-47b6-832d-7699b275ea4c"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/LackOfGoods" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+de339e91-15a4-47b6-832d-7699b275ea4c">
+            <import namespace="http://www.example.org/LackOfGoods"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LackOfGoods"/>
                 </choice>
             </complexType>
         </schema>
@@ -1899,6 +1912,8 @@
         <bpws:variable element="ns0:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:ActivityInput" name="Log3-input" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:postResponse" name="Reply2-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns18:ActivityErrorData"
+            name="_error_CercaArticoloOrchestration" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>

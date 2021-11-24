@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NotAvailable" xmlns:tns="http://www.example.org/NotAvailable" elementFormDefault="qualified">
+
+    <element name="NotAvailable" type="tns:NotAvailableType"></element>
+    
+    <complexType name="NotAvailableType">
+    	<sequence>
+    		<element name="NotAvailableItem" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

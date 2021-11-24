@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UsernameFault" xmlns:tns="http://www.example.org/UsernameFault" elementFormDefault="qualified">
+
+    <element name="UnFault" type="tns:UnFaultType"></element>
+    
+    <complexType name="UnFaultType">
+    	<sequence>
+    		<element name="NotOk" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

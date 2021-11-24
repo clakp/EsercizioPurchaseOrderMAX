@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.example.org/Parameters" xmlns:tns="http://www.example.org/wsdl/1637771416675" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Carrello" targetNamespace="http://www.example.org/wsdl/1637771416675">
+  <wsdl:import location="../Schemas/Carrello/Parameters.xsd" namespace="http://www.example.org/Parameters"/>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://www.example.org/wsdl/1637771416675">
+      <xsd:element name="operationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="operationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="operationRequest">
+    <wsdl:part element="extns:ParamIN" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="operationResponse">
+    <wsdl:part element="extns:ParamOut" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="Carrello">
+    <wsdl:operation name="operation">
+      <wsdl:input message="tns:operationRequest" name="operationInput"/>
+      <wsdl:output message="tns:operationResponse" name="operationOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

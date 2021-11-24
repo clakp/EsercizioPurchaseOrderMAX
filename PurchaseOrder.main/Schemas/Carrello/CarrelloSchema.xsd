@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/schema/1637766988620" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.example.org/schema/1637766988620">
+  <element name="CarrelloOperationRequest">
+    <complexType>
+      <sequence>
+      	<element name="id" type="integer" minOccurs="0" maxOccurs="1"/>
+      	<element name="quantity" type="integer" minOccurs="0" maxOccurs="1"/>
+      	<element name="username" type="string" minOccurs="0" maxOccurs="1"></element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="CarrelloOperationResponse">
+    <complexType>
+      <sequence>
+        <element name="out" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

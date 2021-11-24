@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/ShoppingChart" elementFormDefault="qualified" targetNamespace="http://www.example.org/ShoppingChart">
+
+    <element name="ShoppingChart" type="tns:ShoppingChartType"/>
+    
+    <complexType name="ShoppingChartType">
+    	<sequence>
+    		<element maxOccurs="unbounded" minOccurs="0"
+    			name="ShoppingBasket" type="tns:ShoppingBasketType">
+    		</element>
+    		<element name="Total" type="decimal" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ShoppingBasketType">
+    	<sequence>
+    		<element name="ProductName" type="string"/>
+    		<element name="Price" type="decimal"/>
+    		<element name="Quantity" type="int"/>
+    	</sequence>
+    </complexType>
+</schema>
