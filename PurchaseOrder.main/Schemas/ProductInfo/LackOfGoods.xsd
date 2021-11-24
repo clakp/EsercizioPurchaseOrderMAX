@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/LackOfGoods" xmlns:tns="http://www.example.org/LackOfGoods" elementFormDefault="qualified">
+
+    <element name="LackOfGoods" type="tns:LackOfGoodsType"></element>
+    
+    <complexType name="LackOfGoodsType">
+    	<sequence>
+    		<element name="LackMessage" type="string"></element>
+    		<element name="ErrorCode" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Storage" xmlns:tns="http://www.example.org/Storage" elementFormDefault="qualified">
+
+    <element name="Storage" type="tns:StorageType"></element>
+    
+    <complexType name="StorageType">
+    	<sequence>
+    		<element name="Product" type="tns:ProductType" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="Lack" type="tns:LackType" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ProductType">
+    	<sequence>
+    		<element name="name" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="description" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="price" type="decimal" minOccurs="0" maxOccurs="1"></element>
+    		<element name="quantity" type="integer" minOccurs="0" maxOccurs="1"></element>
+    		<element name="availability" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="FaultType"></complexType>
+
+    <complexType name="LackType">
+    	<sequence>
+    		<element name="LackMessage" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/AddressCount" xmlns:tns="http://www.example.org/AddressCount" elementFormDefault="qualified">
+
+    <element name="AddressCount" type="tns:AddressCountType"></element>
+    
+    <complexType name="AddressCountType">
+    	<sequence>
+    		<element name="Count" type="integer" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>

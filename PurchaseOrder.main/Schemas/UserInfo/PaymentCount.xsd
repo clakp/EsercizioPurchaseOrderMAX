@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/PaymentCount" xmlns:tns="http://www.example.org/PaymentCount" elementFormDefault="qualified">
+
+    <element name="PaymentCount" type="tns:PaymentCountType"></element>
+    
+    <complexType name="PaymentCountType">
+    	<sequence>
+    		<element name="Count" type="integer" minOccurs="0"
+    			maxOccurs="unbounded">
+    		</element>
+    		<element name="CC" type="integer" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="DC" type="integer" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="PP" type="integer" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>

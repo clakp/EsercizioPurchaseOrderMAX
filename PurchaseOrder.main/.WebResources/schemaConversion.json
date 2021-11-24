@@ -8,5 +8,15 @@
         "jsonSchemaLocation": "/PurchaseOrder.main/Service Descriptors/purchaseorder.main.Registration-Registration.json",
         "conversionType": "linked",
         "xsdSchemaTargetNamespace": "http://www.example.org/UserAccountConfirmed"
+    },
+    {
+        "jsonSchemaLocation": "/PurchaseOrder.main/Service Descriptors/purchaseorder.main.CercaArticolo-CercaArticolo.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ProductQuery"
+    },
+    {
+        "jsonSchemaLocation": "/PurchaseOrder.main/Service Descriptors/purchaseorder.main.CercaArticolo-CercaArticolo.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/Storage"
     }
 ]}

@@ -12,6 +12,17 @@
     </scaext:binding>
     <scact:bindingAdjunct xmi:id="_NEWMYUxfEey4XYCb6DIAKA" bindingName="RestService"/>
   </sca:service>
+  <sca:service xmi:id="_zVNjoEx9EeycHdP_K9LSyA" name="cercaarticolo" promote="ComponentCercaArticolo/cercaarticolo">
+    <sca:interface.wsdl xmi:id="_zVTDMEx9EeycHdP_K9LSyA" interface="http://xmlns.example.com/20211123175254PLT#wsdl.interface(cercaarticolo)" scaext:wsdlLocation="../Processes/purchaseorder/main/CercaArticolo.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_zVWGgEx9EeycHdP_K9LSyA" name="RestService1" path="/cercaarticolo" docBasePath="http://localhost:7777/PurchaseOrder.main" docResourcePath="CercaArticolo" basePath="/" connector="purchaseorder.main.Registration" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/purchaseorder.main.CercaArticolo-CercaArticolo.json">
+      <operation xmi:id="_zVX7sEx9EeycHdP_K9LSyA" operationName="post" nickname="post-cercaarticolo" httpMethod="POST" notes="postCercaArticolo" responseStyle="element" requestStyle="element" outputPartName="Response">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_zVWGgUx9EeycHdP_K9LSyA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_zVX7sUx9EeycHdP_K9LSyA" bindingName="RestService1"/>
+  </sca:service>
   <sca:property xmi:id="_3CNd0ExREey4XYCb6DIAKA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_3CWAsExREey4XYCb6DIAKA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_3CZEAExREey4XYCb6DIAKA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
@@ -25,6 +36,12 @@
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ND8jwUxfEey4XYCb6DIAKA" processName="purchaseorder.main.Registration"/>
     <sca:service xmi:id="_NEAOIExfEey4XYCb6DIAKA" name="registration">
       <sca:interface.wsdl xmi:id="_NEBcQExfEey4XYCb6DIAKA" interface="http://xmlns.example.com/20211123141352PLT#wsdl.interface(registration)" scaext:wsdlLocation="../Processes/purchaseorder/main/Registration.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_zVHdAEx9EeycHdP_K9LSyA" name="ComponentCercaArticolo" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zVHdAUx9EeycHdP_K9LSyA" processName="purchaseorder.main.CercaArticolo"/>
+    <sca:service xmi:id="_zVKgUEx9EeycHdP_K9LSyA" name="cercaarticolo">
+      <sca:interface.wsdl xmi:id="_zVLHYEx9EeycHdP_K9LSyA" interface="http://xmlns.example.com/20211123175254PLT#wsdl.interface(cercaarticolo)" scaext:wsdlLocation="../Processes/purchaseorder/main/CercaArticolo.bwp"/>
     </sca:service>
   </sca:component>
 </sca:composite>
