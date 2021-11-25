@@ -12,6 +12,10 @@
         {
             "location": "Service Descriptors/purchaseorder.main.CercaArticolo-CercaArticolo.json",
             "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/purchaseorder.main.ShoppingChart-ShoppingChart.json",
+            "type": "generated"
         }
     ]
 }

@@ -18,5 +18,10 @@
         "jsonSchemaLocation": "/PurchaseOrder.main/Service Descriptors/purchaseorder.main.CercaArticolo-CercaArticolo.json",
         "conversionType": "linked",
         "xsdSchemaTargetNamespace": "http://www.example.org/Storage"
+    },
+    {
+        "jsonSchemaLocation": "/PurchaseOrder.main/Service Descriptors/purchaseorder.main.ShoppingChart-ShoppingChart.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/Parameters"
     }
 ]}

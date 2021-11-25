@@ -8,16 +8,63 @@
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://www.tibco.com/pe/WriteToLogActivitySchema"
     xmlns:ns1="http://www.example.org/schema/1637766988620"
+    xmlns:ns10="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Rethrow"
     xmlns:ns2="http://www.example.org/ShoppingChart"
     xmlns:ns3="http://www.example.org/UsernameValid"
     xmlns:ns4="http://www.example.org/OrderChart"
     xmlns:ns5="http://tns.tibco.com/bw/palette/internal/activityerror+60cef1d8-e0cf-47b9-b69a-df4d7a6a6f50"
     xmlns:ns6="http://www.example.org/UsernameFault"
     xmlns:ns7="http://www.example.org/NotAvailable"
+    xmlns:ns8="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+    xmlns:ns9="http://tns.tibco.com/bw/palette/internal/activityerror+3df8ae5c-bb7f-422f-a260-4e462207c74f"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="End">
+            <endingVariables>
+                <variable>chart</variable>
+            </endingVariables>
+        </task>
+        <task name="chart">
+            <endingVariables>
+                <variable>chart-input</variable>
+                <variable>CheckUsername</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+        <task name="Log">
+            <endingVariables>
+                <variable>Log-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log1">
+            <endingVariables>
+                <variable>Log1-input</variable>
+            </endingVariables>
+        </task>
+        <task name="CheckUsername">
+            <endingVariables>
+                <variable>CheckUsername-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log2">
+            <endingVariables>
+                <variable>Log2-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log3">
+            <endingVariables>
+                <variable>Log3-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log4">
+            <endingVariables>
+                <variable>Log4-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -200,6 +247,45 @@
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+60cef1d8-e0cf-47b9-b69a-df4d7a6a6f50"
             xmlns="http://www.w3.org/2001/XMLSchema"
             xmlns:Q1="http://www.example.org/UsernameFault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+60cef1d8-e0cf-47b9-b69a-df4d7a6a6f50">
+            <import namespace="http://www.example.org/UsernameFault"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:UnFault"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/NotAvailable"
+            xmlns:Q2="http://www.example.org/UsernameFault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
+            <import namespace="http://www.example.org/UsernameFault"/>
+            <import namespace="http://www.example.org/NotAvailable"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:NotAvailable"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q2:UnFault"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+3df8ae5c-bb7f-422f-a260-4e462207c74f"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/NotAvailable" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+3df8ae5c-bb7f-422f-a260-4e462207c74f">
+            <import namespace="http://www.example.org/NotAvailable"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:NotAvailable"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Rethrow"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/UsernameFault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Rethrow">
             <import namespace="http://www.example.org/UsernameFault"/>
             <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
             <complexType name="ActivityErrorDataType">
@@ -793,6 +879,47 @@
                                     x="32"
                                     xsi:type="notation:Bounds" y="53"/>
                                     </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint
+                                    x="212"
+                                    xsi:type="notation:Bounds" y="53"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -806,7 +933,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
                                     <layoutConstraint
-                                    height="169" width="692" xsi:type="notation:Bounds"/>
+                                    height="170" width="692" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -926,6 +1053,17 @@
             <element href="//0/@process/@activity/@faultHandlers/@catch.1/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.2/@children.1/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.2/@children.1/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -967,6 +1105,13 @@
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:ActivityInput" name="Log4-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns8:ActivityErrorData" name="_error_End" sca-bpel:internal="true"/>
+        <bpws:variable element="ns9:ActivityErrorData"
+            name="_error_chart" sca-bpel:internal="true"/>
+        <bpws:variable element="ns10:ActivityErrorData"
+            name="_error_Rethrow" sca-bpel:internal="true"/>
+        <bpws:variable element="ns10:ActivityErrorData"
+            name="_error_Rethrow1" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1075,11 +1220,16 @@
                 tibex:faultNameVar="FaultName" tibex:xpdlId="769e7c0e-edb2-4574-b773-d2043fec1048">
                 <bpws:scope name="scope3">
                     <bpws:flow name="flow3">
-                        <bpws:links/>
+                        <bpws:links>
+                            <bpws:link name="Log4ToRethrow2" tibex:linkType="SUCCESS"/>
+                        </bpws:links>
                         <bpws:extensionActivity>
                             <tibex:activityExtension
                                 inputVariable="Log4-input" name="Log4"
                                 tibex:xpdlId="ee482fa9-2c4d-4e81-a1de-466cead4ba96" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                <bpws:sources>
+                                    <bpws:source linkName="Log4ToRethrow2"/>
+                                </bpws:sources>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;Log4-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;'Generic Error-CarrelloOrchestration'&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
@@ -1104,6 +1254,11 @@
                                 </tibex:config>
                             </tibex:activityExtension>
                         </bpws:extensionActivity>
+                        <bpws:rethrow name="Rethrow2" tibex:xpdlId="7a7b42ad-b8e7-443f-aa99-f06db3bd847c">
+                            <bpws:targets>
+                                <bpws:target linkName="Log4ToRethrow2"/>
+                            </bpws:targets>
+                        </bpws:rethrow>
                     </bpws:flow>
                 </bpws:scope>
             </bpws:catchAll>

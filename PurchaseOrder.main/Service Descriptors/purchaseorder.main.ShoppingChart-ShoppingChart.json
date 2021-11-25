@@ -1,0 +1,87 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ShoppingChart",
+    "description" : "ShoppingChart service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/shoppingchart" : {
+      "post" : {
+        "summary" : "postShoppingChart",
+        "description" : "postShoppingChart",
+        "operationId" : "post-shoppingchart",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/ParamIN"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a ParamOut to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ParamOut"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ParamOut" : {
+      "type" : "object",
+      "properties" : {
+        "ShopC" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ShopC",
+            "uniqueItems" : false
+          }
+        },
+        "Total" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "ParamIN" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "quantity" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "username" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ShopC" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "string"
+        },
+        "Price" : {
+          "type" : "integer"
+        },
+        "Quantity" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    }
+  }
+}

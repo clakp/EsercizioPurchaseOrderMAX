@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/paymentcontrol" xmlns:tns="http://www.example.org/paymentcontrol" elementFormDefault="qualified">
+
+    <element name="paymentcontrol" type="tns:paymentcontrolType"></element>
+    
+    <complexType name="paymentcontrolType">
+    	<sequence>
+    		<element name="paymentcheck" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

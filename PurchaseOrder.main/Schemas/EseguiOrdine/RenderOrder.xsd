@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/RenderOrder" xmlns:tns="http://www.example.org/RenderOrder" elementFormDefault="qualified">
+
+    <element name="RenderOrder" type="tns:RenderOrderType"></element>
+    
+    <complexType name="RenderOrderType">
+    	<sequence>
+    		<element name="product" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="price" type="decimal" minOccurs="0" maxOccurs="1"></element>
+    		<element name="quantity" type="int" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/AccountOrder" xmlns:tns="http://www.example.org/AccountOrder" elementFormDefault="qualified">
+
+    <element name="AccountOrder" type="tns:AccountOrderType"></element>
+    
+    <complexType name="AccountOrderType">
+    	<sequence>
+    		<element name="AccOrd" type="tns:AccOrdType" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="AccOrdType">
+    	<sequence>
+    		<element name="Username" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="id_payment" type="int" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="id_address" type="int" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="PayMethod" minOccurs="0" maxOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="CC"></enumeration>
+    					<enumeration value="DC"></enumeration>
+    					<enumeration value="PP"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    </complexType>
+</schema>

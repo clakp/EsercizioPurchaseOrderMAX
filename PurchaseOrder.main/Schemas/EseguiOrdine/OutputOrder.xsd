@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OutputOrder" xmlns:tns="http://www.example.org/OutputOrder" elementFormDefault="qualified" xmlns:Q1="http://www.example.org/ShoppingChart">
+
+    <import namespace="http://www.example.org/ShoppingChart"></import>
+    <element name="OutputOrder" type="tns:OutputOrderType"></element>
+    
+    <complexType name="OutputOrderType">
+    	<sequence>
+    		<element name="OrderNow" type="tns:OrderNowType" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="OrderNowType">
+    	<sequence>
+    		<element name="ShoppingChart" type="Q1:ShoppingChartType" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

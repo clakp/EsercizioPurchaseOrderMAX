@@ -40,6 +40,115 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="End">
+            <endingVariables>
+                <variable>Start</variable>
+                <variable>UsCheck</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryUs">
+            <endingVariables>
+                <variable>QueryUs-input</variable>
+            </endingVariables>
+        </task>
+        <task name="UsCheck">
+            <endingVariables>
+                <variable>UsCheck-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Throw">
+            <endingVariables>
+                <variable>Throw-input</variable>
+            </endingVariables>
+        </task>
+        <task name="InsertPD">
+            <endingVariables>
+                <variable>InsertPD-input</variable>
+                <variable>InsertPD</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryPD">
+            <endingVariables>
+                <variable>QueryPD-input</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryPM">
+            <endingVariables>
+                <variable>QueryPM-input</variable>
+                <variable>QueryPD</variable>
+            </endingVariables>
+        </task>
+        <task name="InsertAd">
+            <endingVariables>
+                <variable>InsertAd-input</variable>
+                <variable>InsertAd</variable>
+                <variable>QueryPM</variable>
+            </endingVariables>
+        </task>
+        <task name="InsertPM">
+            <endingVariables>
+                <variable>InsertPM-input</variable>
+                <variable>InsertPM</variable>
+            </endingVariables>
+        </task>
+        <task name="PMCheck">
+            <endingVariables>
+                <variable>PMCheck-input</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryNewPM">
+            <endingVariables>
+                <variable>QueryNewPM-input</variable>
+                <variable>QueryUs</variable>
+            </endingVariables>
+        </task>
+        <task name="InsertNewPM">
+            <endingVariables>
+                <variable>InsertNewPM-input</variable>
+                <variable>InsertNewPM</variable>
+            </endingVariables>
+        </task>
+        <task name="Empty">
+            <endingVariables>
+                <variable>PMCheck</variable>
+                <variable>QueryNewPM</variable>
+                <variable>AdCheck</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryNewAd">
+            <endingVariables>
+                <variable>QueryNewAd-input</variable>
+            </endingVariables>
+        </task>
+        <task name="AdCheck">
+            <endingVariables>
+                <variable>AdCheck-input</variable>
+            </endingVariables>
+        </task>
+        <task name="InsertNewAd">
+            <endingVariables>
+                <variable>InsertNewAd-input</variable>
+                <variable>InsertNewAd</variable>
+                <variable>QueryNewAd</variable>
+            </endingVariables>
+        </task>
+        <task name="Log1">
+            <endingVariables>
+                <variable>Log1-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log2">
+            <endingVariables>
+                <variable>Log2-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log">
+            <endingVariables>
+                <variable>Log-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"

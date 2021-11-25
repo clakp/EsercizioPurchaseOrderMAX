@@ -23,6 +23,9 @@
     xmlns:ns22="http://www.tibco.com/namespaces/tnt/plugins/jdbc+5846eb25-a368-4d00-97f9-2fc5a761bcce+output"
     xmlns:ns23="http://www.example.org/totalprice"
     xmlns:ns24="http://www.example.org/NotAvailable"
+    xmlns:ns25="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+    xmlns:ns26="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
+    xmlns:ns27="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Rethrow"
     xmlns:ns3="http://www.tibco.com/namespaces/tnt/plugins/restinvoke+34317f45-cdeb-4b77-b98b-47d2d81b0608+RestInvokeInput"
     xmlns:ns4="http://www.tibco.com/namespaces/tnt/plugins/restinvoke+34317f45-cdeb-4b77-b98b-47d2d81b0608+RestInvokeOutput"
     xmlns:ns5="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.Rest"
@@ -845,6 +848,42 @@
                 </complexType>
             </element>
         </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/NotAvailable" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.internal.end">
+            <import namespace="http://www.example.org/NotAvailable"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:NotAvailable"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/NotAvailable" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
+            <import namespace="http://www.example.org/NotAvailable"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:NotAvailable"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Rethrow"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/NotAvailable" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Rethrow">
+            <import namespace="http://www.example.org/NotAvailable"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:NotAvailable"/>
+                </choice>
+            </complexType>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="Kripta"
         createdOn="Wed Nov 24 15:56:48 CET 2021" description=""
@@ -1526,6 +1565,47 @@
                                     x="18"
                                     xsi:type="notation:Bounds" y="60"/>
                                     </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint
+                                    x="122"
+                                    xsi:type="notation:Bounds" y="60"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1716,6 +1796,17 @@
             <element href="//0/@process/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.1/@children.1/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.1/@children.1/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1816,6 +1907,12 @@
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:ActivityInput" name="Log3-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns25:ActivityErrorData"
+            name="_error_End" sca-bpel:internal="true"/>
+        <bpws:variable element="ns26:ActivityErrorData"
+            name="_error_Throw" sca-bpel:internal="true"/>
+        <bpws:variable element="ns27:ActivityErrorData"
+            name="_error_Rethrow" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1878,11 +1975,16 @@
                 tibex:faultNameVar="FaultName" tibex:xpdlId="e10d33fa-b960-47f9-ae9c-b2ea4171affb">
                 <bpws:scope name="scope2">
                     <bpws:flow name="flow2">
-                        <bpws:links/>
+                        <bpws:links>
+                            <bpws:link name="Log3ToRethrow1" tibex:linkType="SUCCESS"/>
+                        </bpws:links>
                         <bpws:extensionActivity>
                             <tibex:activityExtension
                                 inputVariable="Log3-input" name="Log3"
                                 tibex:xpdlId="b72e5980-16b9-4e7f-8bb7-2b3383691393" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                <bpws:sources>
+                                    <bpws:source linkName="Log3ToRethrow1"/>
+                                </bpws:sources>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;Log3-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;'Generic Error-Chart'&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
@@ -1907,6 +2009,11 @@
                                 </tibex:config>
                             </tibex:activityExtension>
                         </bpws:extensionActivity>
+                        <bpws:rethrow name="Rethrow1" tibex:xpdlId="0a176494-92c8-45bd-96e0-de6a73942139">
+                            <bpws:targets>
+                                <bpws:target linkName="Log3ToRethrow1"/>
+                            </bpws:targets>
+                        </bpws:rethrow>
                     </bpws:flow>
                 </bpws:scope>
             </bpws:catchAll>
@@ -1923,7 +2030,7 @@
                 <bpws:link name="ParseJSONToJDBCUpdate" tibex:linkType="SUCCESSWITHCONDITION"/>
                 <bpws:link name="JDBCQueryToLog1" tibex:linkType="SUCCESS"/>
                 <bpws:link name="MapperToLog1" tibex:linkType="SUCCESS"/>
-                <bpws:link name="ParseJSONToThrow" tibex:linkType="SUCCESS"/>
+                <bpws:link name="ParseJSONToThrow" tibex:linkType="SUCCESSWITHNOCONDITION"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1947,7 +2054,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns8=&quot;http://www.example.org/ShoppingChart&quot; xmlns:tns9=&quot;http://www.example.org/totalprice&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;QueryChart&quot;/>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns8:ShoppingChart>&lt;xsl:for-each select=&quot;$QueryChart/Record&quot;>&lt;tns8:ShoppingBasket>&lt;tns8:ProductName>&lt;xsl:value-of select=&quot;product&quot;/>&lt;/tns8:ProductName>&lt;tns8:Price>&lt;xsl:value-of select=&quot;price&quot;/>&lt;/tns8:Price>&lt;tns8:Quantity>&lt;xsl:value-of select=&quot;quantity&quot;/>&lt;/tns8:Quantity>&lt;/tns8:ShoppingBasket>&lt;/xsl:for-each>&lt;tns8:Total>&lt;xsl:value-of select=&quot;sum($Mapper/tns9:prices)&quot;/>&lt;/tns8:Total>&lt;/tns8:ShoppingChart>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns8=&quot;http://www.example.org/ShoppingChart&quot; xmlns:tns9=&quot;http://www.example.org/totalprice&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;QueryChart&quot;/>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns8:ShoppingChart>&lt;xsl:for-each select=&quot;$QueryChart/Record&quot;>&lt;tns8:ShoppingBasket>&lt;xsl:if test=&quot;product&quot;>&lt;tns8:Product>&lt;xsl:value-of select=&quot;product&quot;/>&lt;/tns8:Product>&lt;/xsl:if>&lt;xsl:if test=&quot;price&quot;>&lt;tns8:Price>&lt;xsl:value-of select=&quot;price&quot;/>&lt;/tns8:Price>&lt;/xsl:if>&lt;xsl:if test=&quot;quantity&quot;>&lt;tns8:Quantity>&lt;xsl:value-of select=&quot;quantity&quot;/>&lt;/tns8:Quantity>&lt;/xsl:if>&lt;/tns8:ShoppingBasket>&lt;/xsl:for-each>&lt;tns8:Total>&lt;xsl:value-of select=&quot;sum($Mapper/tns9:prices)&quot;/>&lt;/tns8:Total>&lt;/tns8:ShoppingChart>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2218,11 +2325,17 @@
                         <bpws:source linkName="ParseJSONToJDBCUpdate">
                             <tibex:DesignExpression>
                                 <tibex:expression
-                                    expression="not(exists($ParseJSON/ns18:Product/ns18:name))" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    expression="exists($ParseJSON/ns18:Product/ns18:name)" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
-                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[not(exists($ParseJSON/ns18:Product/ns18:name))]]></bpws:transitionCondition>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[exists($ParseJSON/ns18:Product/ns18:name)]]></bpws:transitionCondition>
                         </bpws:source>
-                        <bpws:source linkName="ParseJSONToThrow"/>
+                        <bpws:source linkName="ParseJSONToThrow">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                        </bpws:source>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding

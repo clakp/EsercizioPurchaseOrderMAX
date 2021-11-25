@@ -20,6 +20,39 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="End">
+            <endingVariables>
+                <variable>QueryUn</variable>
+            </endingVariables>
+        </task>
+        <task name="Log">
+            <endingVariables>
+                <variable>Log-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log1">
+            <endingVariables>
+                <variable>Log1-input</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryUn">
+            <endingVariables>
+                <variable>QueryUn-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Throw">
+            <endingVariables>
+                <variable>Throw-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log2">
+            <endingVariables>
+                <variable>Log2-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -229,6 +262,14 @@
                                     name="id" type="int"/>
                                     <element maxOccurs="1" minOccurs="0"
                                     name="username" nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="firstname" type="string"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="lastname" type="string"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="dateofbirth" type="date"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="taxcode" type="string"/>
                                 </sequence>
                             </complexType>
                         </element>
@@ -1009,7 +1050,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/UsernameValid&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;QueryUn&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns3:NewElement>&lt;xsl:if test=&quot;$QueryUn/Record[1]/id&quot;>&lt;tns3:id_us>&lt;xsl:value-of select=&quot;$QueryUn/Record[1]/id&quot;/>&lt;/tns3:id_us>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryUn/Record[1]/username&quot;>&lt;tns3:username>&lt;xsl:value-of select=&quot;$QueryUn/Record[1]/username&quot;/>&lt;/tns3:username>&lt;/xsl:if>&lt;/tns3:NewElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/UsernameValid&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;QueryUn&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns3:NewElement>&lt;xsl:if test=&quot;$QueryUn/Record[1]/id&quot;>&lt;tns3:id_us>&lt;xsl:value-of select=&quot;$QueryUn/Record[1]/id&quot;/>&lt;/tns3:id_us>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryUn/Record[1]/username&quot;>&lt;tns3:username>&lt;xsl:value-of select=&quot;$QueryUn/Record[1]/username&quot;/>&lt;/tns3:username>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryUn/Record[1]/firstname&quot;>&lt;tns3:firstname>&lt;xsl:value-of select=&quot;$QueryUn/Record[1]/firstname&quot;/>&lt;/tns3:firstname>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryUn/Record[1]/lastname&quot;>&lt;tns3:lastname>&lt;xsl:value-of select=&quot;$QueryUn/Record[1]/lastname&quot;/>&lt;/tns3:lastname>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryUn/Record[1]/dateofbirth&quot;>&lt;tns3:dateofbirth>&lt;xsl:value-of select=&quot;$QueryUn/Record[1]/dateofbirth&quot;/>&lt;/tns3:dateofbirth>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryUn/Record[1]/taxcode&quot;>&lt;tns3:taxcode>&lt;xsl:value-of select=&quot;$QueryUn/Record[1]/taxcode&quot;/>&lt;/tns3:taxcode>&lt;/xsl:if>&lt;/tns3:NewElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1131,7 +1172,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT id, username&#xa;  FROM &quot;ecommerce&quot;.personaldata&#xa;  where username=?&#xa;  limit 1&#xa;"
+                                    sqlStatement="SELECT id, username, firstname, lastname, dateofbirth, taxcode&#xa;  FROM &quot;ecommerce&quot;.personaldata&#xa;  where username=?&#xa;  limit 1&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <PreparedParameters
                                     DataType="12"
@@ -1142,6 +1183,18 @@
                                     columnName="username"
                                     dataType="12"
                                     status="OptionalElement" typeName="varchar"/>
+                                    <columnMetadata columnIndex="3"
+                                    columnName="firstname"
+                                    dataType="12" typeName="varchar"/>
+                                    <columnMetadata columnIndex="4"
+                                    columnName="lastname"
+                                    dataType="12" typeName="varchar"/>
+                                    <columnMetadata columnIndex="5"
+                                    columnName="dateofbirth"
+                                    dataType="91" typeName="date"/>
+                                    <columnMetadata columnIndex="6"
+                                    columnName="taxcode"
+                                    dataType="12" typeName="varchar"/>
                                     </value>
                                 </properties>
                             </activityConfig>

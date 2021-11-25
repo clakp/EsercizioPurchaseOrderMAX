@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:Parameters="http://www.example.org/Parameters" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:schema_1637766988620="http://www.example.org/schema/1637766988620" xmlns:wsdl_1637766988546="http://www.example.org/wsdl/1637766988546" xmlns:wsdl_1637771416675="http://www.example.org/wsdl/1637771416675" xmi:id="_2hDRgExREey4XYCb6DIAKA" targetNamespace="http://tns.tibco.com/bw/composite/PurchaseOrder.main" name="PurchaseOrder.main" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:ParamOrder="http://www.example.org/ParamOrder" xmlns:Parameters="http://www.example.org/Parameters" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:schema_1637766988620="http://www.example.org/schema/1637766988620" xmlns:schema_1637829358824="http://www.example.org/schema/1637829358824" xmlns:schema_1637835837373="http://www.example.org/schema/1637835837373" xmlns:schema_1637837143653="http://www.example.org/schema/1637837143653" xmlns:wsdl_1637766988546="http://www.example.org/wsdl/1637766988546" xmlns:wsdl_1637771416675="http://www.example.org/wsdl/1637771416675" xmlns:wsdl_1637829358759="http://www.example.org/wsdl/1637829358759" xmlns:wsdl_1637835490522="http://www.example.org/wsdl/1637835490522" xmlns:wsdl_1637835837319="http://www.example.org/wsdl/1637835837319" xmlns:wsdl_1637837143564="http://www.example.org/wsdl/1637837143564" xmi:id="_2hDRgExREey4XYCb6DIAKA" targetNamespace="http://tns.tibco.com/bw/composite/PurchaseOrder.main" name="PurchaseOrder.main" compositeext:version="1.0.0" compositeext:formatVersion="2">
   <sca:service xmi:id="_NED4gExfEey4XYCb6DIAKA" name="registration" promote="ComponentRegistration/registration">
     <sca:interface.wsdl xmi:id="_NEIJ8ExfEey4XYCb6DIAKA" interface="http://xmlns.example.com/20211123141352PLT#wsdl.interface(registration)" scaext:wsdlLocation="../Processes/purchaseorder/main/Registration.bwp"/>
     <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_NER68ExfEey4XYCb6DIAKA" name="RestService" path="/registration" docBasePath="http://localhost:7777/PurchaseOrder.main" docResourcePath="Registration" basePath="/" connector="purchaseorder.main.Registration" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/purchaseorder.main.Registration-Registration.json">
@@ -23,26 +23,60 @@
     </scaext:binding>
     <scact:bindingAdjunct xmi:id="_zVX7sUx9EeycHdP_K9LSyA" bindingName="RestService1"/>
   </sca:service>
-  <sca:service xmi:id="_7GMhsk1DEey4rsyfNBiVxg" name="Carrello" promote="ComponentCarrello/Carrello">
-    <sca:interface.wsdl xmi:id="_7GMhtk1DEey4rsyfNBiVxg" interface="http://www.example.org/wsdl/1637771416675#wsdl.interface(Carrello)" scaext:wsdlLocation="../Service%20Descriptors/Carrello.wsdl"/>
-    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_0XIhUE1GEeyv-vzukLSztg" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/244c2fdb857b4c42a54cf08d1cac5ea9/SOAPServiceBinding" portTypeQName="wsdl_1637771416675:Carrello" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/Carrello.wsdl">
-      <bindingType xmi:id="_0XOn8E1GEeyv-vzukLSztg"/>
-      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_1cIagE1GEeyv-vzukLSztg" endpointURI="/SOAPServiceBinding/carrello/" httpConnector="purchaseorder.main.Registration"/>
-      <operationConfiguration xmi:id="_0XQdIE1GEeyv-vzukLSztg" operationName="operation" action="operation" actionNeeded="true">
-        <bindingType xmi:id="_0XQdIU1GEeyv-vzukLSztg"/>
-        <messageConfiguration xmi:id="_0XQdIk1GEeyv-vzukLSztg" messageQName="wsdl_1637771416675:operationRequest" wsdlLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/Carrello.wsdl">
-          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_0XQdI01GEeyv-vzukLSztg" partName="parameters" partElementName="Parameters:ParamIN"/>
+  <sca:service xmi:id="_3W2Q8k3ZEeyzpcQ5iXWxfQ" name="EseguiOrdine" promote="ComponentEseguiOrdine/EseguiOrdine">
+    <sca:interface.wsdl xmi:id="_3W24A03ZEeyzpcQ5iXWxfQ" interface="http://www.example.org/wsdl/1637835837319#wsdl.interface(EseguiOrdine)" scaext:wsdlLocation="../Service%20Descriptors/EseguiOrdine.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_Wh1tUE3aEeyzpcQ5iXWxfQ" name="SOAPServiceBinding1" targetNamespace="http://www.tibco.com/b94cce09bf1c42808dcf6f851d4cc188/SOAPServiceBinding1" portTypeQName="wsdl_1637835837319:EseguiOrdine" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/EseguiOrdine.wsdl">
+      <bindingType xmi:id="_Wh1tUU3aEeyzpcQ5iXWxfQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_YDH54E3aEeyzpcQ5iXWxfQ" endpointURI="/SOAPServiceBinding1/eseguiOrdine/" httpConnector="purchaseorder.main.Registration"/>
+      <operationConfiguration xmi:id="_Wh1tUk3aEeyzpcQ5iXWxfQ" operationName="operation" action="operation" actionNeeded="true">
+        <bindingType xmi:id="_Wh1tU03aEeyzpcQ5iXWxfQ"/>
+        <messageConfiguration xmi:id="_Wh1tVE3aEeyzpcQ5iXWxfQ" messageQName="wsdl_1637835837319:operationRequest" wsdlLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/EseguiOrdine.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_Wh1tVU3aEeyzpcQ5iXWxfQ" partName="parameters" partElementName="schema_1637835837373:operationRequest"/>
         </messageConfiguration>
-        <messageConfiguration xmi:id="_0XQdJE1GEeyv-vzukLSztg" messageQName="wsdl_1637771416675:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/Carrello.wsdl">
-          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_0XQdJU1GEeyv-vzukLSztg" partName="parameters" partElementName="Parameters:ParamOut"/>
+        <messageConfiguration xmi:id="_Wh1tVk3aEeyzpcQ5iXWxfQ" messageQName="wsdl_1637835837319:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/EseguiOrdine.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_Wh1tV03aEeyzpcQ5iXWxfQ" partName="parameters" partElementName="schema_1637835837373:operationResponse"/>
         </messageConfiguration>
-        <context xmi:id="_0XQdJk1GEeyv-vzukLSztg">
-          <inputMapping xmi:id="_0XREME1GEeyv-vzukLSztg"/>
-          <outputMapping xmi:id="_0XREMU1GEeyv-vzukLSztg" direction="OUTPUT"/>
+        <context xmi:id="_Wh1tWE3aEeyzpcQ5iXWxfQ">
+          <inputMapping xmi:id="_Wh1tWU3aEeyzpcQ5iXWxfQ"/>
+          <outputMapping xmi:id="_Wh1tWk3aEeyzpcQ5iXWxfQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_e5xooE3aEeyzpcQ5iXWxfQ" operationName="operation1" action="operation1" actionNeeded="true">
+        <bindingType xmi:id="_e5xooU3aEeyzpcQ5iXWxfQ"/>
+        <messageConfiguration xmi:id="_e5xook3aEeyzpcQ5iXWxfQ" messageQName="wsdl_1637835837319:operation1Request" wsdlLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/EseguiOrdine.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_e5xoo03aEeyzpcQ5iXWxfQ" partName="parameters" partElementName="ParamOrder:operation1Request"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_e5xopE3aEeyzpcQ5iXWxfQ" messageQName="wsdl_1637835837319:operation1Response" messageDirection="OUTPUT" wsdlLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/EseguiOrdine.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_e5xopU3aEeyzpcQ5iXWxfQ" partName="parameters" partElementName="ParamOrder:operation1Response"/>
+        </messageConfiguration>
+        <context xmi:id="_e5xopk3aEeyzpcQ5iXWxfQ">
+          <inputMapping xmi:id="_e5xop03aEeyzpcQ5iXWxfQ"/>
+          <outputMapping xmi:id="_e5xoqE3aEeyzpcQ5iXWxfQ" direction="OUTPUT"/>
         </context>
       </operationConfiguration>
     </scaext:binding>
-    <scact:bindingAdjunct xmi:id="_0XREMk1GEeyv-vzukLSztg" bindingName="SOAPServiceBinding"/>
+    <scact:bindingAdjunct xmi:id="_Wh1tW03aEeyzpcQ5iXWxfQ" bindingName="SOAPServiceBinding1"/>
+  </sca:service>
+  <sca:service xmi:id="_3acQIE3cEeyXLKUnnw8cbw" name="ShoppingChart" promote="ComponentShoppingChart/ShoppingChart">
+    <sca:interface.wsdl xmi:id="_3acQJE3cEeyXLKUnnw8cbw" interface="http://www.example.org/wsdl/1637837143564#wsdl.interface(ShoppingChart)" scaext:wsdlLocation="../Service%20Descriptors/ShoppingChart.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="__x-i0E3cEeyXLKUnnw8cbw" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/f65b0ba0dd3f438993af14efea6a2ad2/SOAPServiceBinding" portTypeQName="wsdl_1637837143564:ShoppingChart" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/ShoppingChart.wsdl">
+      <bindingType xmi:id="__yDbUE3cEeyXLKUnnw8cbw"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_BBnlwE3dEeyXLKUnnw8cbw" endpointURI="/SOAPServiceBinding/shoppingChart/" httpConnector="purchaseorder.main.Registration"/>
+      <operationConfiguration xmi:id="__yDbUU3cEeyXLKUnnw8cbw" operationName="operation" action="operation" actionNeeded="true">
+        <bindingType xmi:id="__yDbUk3cEeyXLKUnnw8cbw"/>
+        <messageConfiguration xmi:id="__yDbU03cEeyXLKUnnw8cbw" messageQName="wsdl_1637837143564:operationRequest" wsdlLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/ShoppingChart.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="__yDbVE3cEeyXLKUnnw8cbw" partName="parameters" partElementName="schema_1637837143653:operationRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="__yDbVU3cEeyXLKUnnw8cbw" messageQName="wsdl_1637837143564:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/PurchaseOrder.main/Service%20Descriptors/ShoppingChart.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="__yDbVk3cEeyXLKUnnw8cbw" partName="parameters" partElementName="schema_1637837143653:operationResponse"/>
+        </messageConfiguration>
+        <context xmi:id="__yDbV03cEeyXLKUnnw8cbw">
+          <inputMapping xmi:id="__yECYE3cEeyXLKUnnw8cbw"/>
+          <outputMapping xmi:id="__yECYU3cEeyXLKUnnw8cbw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="__yECYk3cEeyXLKUnnw8cbw" bindingName="SOAPServiceBinding"/>
   </sca:service>
   <sca:property xmi:id="_3CNd0ExREey4XYCb6DIAKA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_3CWAsExREey4XYCb6DIAKA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
@@ -65,10 +99,16 @@
       <sca:interface.wsdl xmi:id="_zVLHYEx9EeycHdP_K9LSyA" interface="http://xmlns.example.com/20211123175254PLT#wsdl.interface(cercaarticolo)" scaext:wsdlLocation="../Processes/purchaseorder/main/CercaArticolo.bwp"/>
     </sca:service>
   </sca:component>
-  <sca:component xmi:id="_zA3ZUE1DEey4rsyfNBiVxg" name="ComponentCarrello" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zA3ZUU1DEey4rsyfNBiVxg" processName="purchaseorder.main.Carrello"/>
-    <sca:service xmi:id="_7GMhsE1DEey4rsyfNBiVxg" name="Carrello">
-      <sca:interface.wsdl xmi:id="_7GMhsU1DEey4rsyfNBiVxg" interface="http://www.example.org/wsdl/1637771416675#wsdl.interface(Carrello)" scaext:wsdlLocation="../Service%20Descriptors/Carrello.wsdl"/>
+  <sca:component xmi:id="_ysYs8E3ZEeyzpcQ5iXWxfQ" name="ComponentEseguiOrdine" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ysYs8U3ZEeyzpcQ5iXWxfQ" processName="purchaseorder.main.EseguiOrdine"/>
+    <sca:service xmi:id="_3W2Q8E3ZEeyzpcQ5iXWxfQ" name="EseguiOrdine">
+      <sca:interface.wsdl xmi:id="_3W2Q8U3ZEeyzpcQ5iXWxfQ" interface="http://www.example.org/wsdl/1637835837319#wsdl.interface(EseguiOrdine)" scaext:wsdlLocation="../Service%20Descriptors/EseguiOrdine.wsdl"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_1OFtUE3cEeyXLKUnnw8cbw" name="ComponentShoppingChart" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1OFtUU3cEeyXLKUnnw8cbw" processName="purchaseorder.main.ShoppingChart"/>
+    <sca:service xmi:id="_3abpEE3cEeyXLKUnnw8cbw" name="ShoppingChart">
+      <sca:interface.wsdl xmi:id="_3abpEU3cEeyXLKUnnw8cbw" interface="http://www.example.org/wsdl/1637837143564#wsdl.interface(ShoppingChart)" scaext:wsdlLocation="../Service%20Descriptors/ShoppingChart.wsdl"/>
     </sca:service>
   </sca:component>
 </sca:composite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/FaultPM" xmlns:tns="http://www.example.org/FaultPM" elementFormDefault="qualified">
+
+    <element name="FaultPM" type="tns:FaultPMType"></element>
+    
+    <complexType name="FaultPMType">
+    	<sequence>
+    		<element name="FaultPMMex" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

@@ -5,10 +5,16 @@
     
     <complexType name="UnValidType">
     	<sequence>
-            <element name="id_us" type="integer" minOccurs="0" maxOccurs="1"></element>
-            <element name="username" type="string" minOccurs="0"
+    		<element name="id_us" type="integer" minOccurs="0"
     			maxOccurs="1">
     		</element>
+    		<element name="username" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="firstname" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="lastname" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="dateofbirth" type="date" minOccurs="0" maxOccurs="1"></element>
+    		<element name="taxcode" type="string" minOccurs="0" maxOccurs="1"></element>
     	</sequence>
     </complexType>
 </schema>
