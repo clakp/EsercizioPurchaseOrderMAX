@@ -30,6 +30,8 @@
     xmlns:ns28="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Throw"
     xmlns:ns29="http://tns.tibco.com/bw/palette/internal/activityerror+com.tibco.bw.core.design.process.editor.Activity_4002_Rethrow"
     xmlns:ns3="http://www.tibco.com/namespaces/tnt/plugins/jdbc+0bd607c0-fbb0-4e2b-9189-21a1d43044b6+output"
+    xmlns:ns30="http://www.tibco.com/namespaces/tnt/plugins/transformxml"
+    xmlns:ns31="http://tns.tibco.com/bw/palette/internal/activityerror+bw.xml.transformxml"
     xmlns:ns4="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.JDBCQuery"
     xmlns:ns5="http://www.tibco.com/namespaces/tnt/plugins/jdbc+18bc64ba-5b9a-4bd2-a77a-6c8f86f06742+input"
     xmlns:ns6="http://www.tibco.com/namespaces/tnt/plugins/jdbc+18bc64ba-5b9a-4bd2-a77a-6c8f86f06742+output"
@@ -40,106 +42,6 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="End">
-            <endingVariables>
-                <variable>QueryCh</variable>
-                <variable>TotalPrice</variable>
-            </endingVariables>
-        </task>
-        <task name="Log">
-            <endingVariables>
-                <variable>Log-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log1">
-            <endingVariables>
-                <variable>Log1-input</variable>
-            </endingVariables>
-        </task>
-        <task name="QueryCh">
-            <endingVariables>
-                <variable>QueryCh-input</variable>
-            </endingVariables>
-        </task>
-        <task name="QueryPM">
-            <endingVariables>
-                <variable>QueryPM-input</variable>
-            </endingVariables>
-        </task>
-        <task name="ThrowCh">
-            <endingVariables>
-                <variable>ThrowCh-input</variable>
-            </endingVariables>
-        </task>
-        <task name="QueryAd">
-            <endingVariables>
-                <variable>QueryAd-input</variable>
-            </endingVariables>
-        </task>
-        <task name="ThrowPM">
-            <endingVariables>
-                <variable>ThrowPM-input</variable>
-            </endingVariables>
-        </task>
-        <task name="ThrowAd">
-            <endingVariables>
-                <variable>ThrowAd-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Invoice">
-            <endingVariables>
-                <variable>Invoice-input</variable>
-                <variable>Invoice</variable>
-                <variable>RenderXml</variable>
-            </endingVariables>
-        </task>
-        <task name="Renderdata">
-            <endingVariables>
-                <variable>Renderdata-input</variable>
-            </endingVariables>
-        </task>
-        <task name="RenderXml">
-            <endingVariables>
-                <variable>RenderXml-input</variable>
-                <variable>Start</variable>
-                <variable>QueryPM</variable>
-                <variable>QueryAd</variable>
-                <variable>Renderdata</variable>
-                <variable>PaymentCheck</variable>
-            </endingVariables>
-        </task>
-        <task name="PaymentCheck">
-            <endingVariables>
-                <variable>PaymentCheck-input</variable>
-            </endingVariables>
-        </task>
-        <task name="TotalPrice">
-            <endingVariables>
-                <variable>TotalPrice-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log2">
-            <endingVariables>
-                <variable>Log2-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log3">
-            <endingVariables>
-                <variable>Log3-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log4">
-            <endingVariables>
-                <variable>Log4-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log5">
-            <endingVariables>
-                <variable>Log5-input</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
@@ -1119,6 +1021,90 @@
                 </choice>
             </complexType>
         </schema>
+        <xsd:schema
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/transformxml"
+            xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/transformxml" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:complexType name="bytesInputType">
+                <xsd:sequence>
+                    <xsd:element ref="tns:xmlBytesIn"/>
+                    <xsd:element minOccurs="0" ref="tns:stylesheet"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" ref="tns:parameter"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="errorType">
+                <xsd:sequence>
+                    <xsd:element name="message" type="xsd:string"/>
+                    <xsd:element name="location" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="outputType">
+                <xsd:sequence>
+                    <xsd:element name="xmlOutput" type="xsd:base64Binary"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="parameterType">
+                <xsd:sequence>
+                    <xsd:element name="name" type="xsd:string"/>
+                    <xsd:element name="value" type="xsd:string"/>
+                    <xsd:element name="isXMLDocument" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="textInputType">
+                <xsd:sequence>
+                    <xsd:element ref="tns:xmlString"/>
+                    <xsd:element minOccurs="0" ref="tns:stylesheet"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" ref="tns:parameter"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="treeInputType">
+                <xsd:sequence>
+                    <xsd:element ref="tns:xmlTree"/>
+                    <xsd:element minOccurs="0" ref="tns:stylesheet"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" ref="tns:parameter"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="treeOutputType">
+                <xsd:sequence>
+                    <xsd:any namespace="##any" processContents="strict"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="bytesInput" type="tns:bytesInputType"/>
+            <xsd:element name="engine" type="xsd:string"/>
+            <xsd:element name="error" type="tns:errorType"/>
+            <xsd:element name="inputStyle" type="xsd:string"/>
+            <xsd:element name="parameter" type="tns:parameterType"/>
+            <xsd:element name="stylesheet" type="xsd:string"/>
+            <xsd:element name="textInput" type="tns:textInputType"/>
+            <xsd:element name="treeInput" type="tns:treeInputType"/>
+            <xsd:element name="treeOutput" type="tns:treeOutputType"/>
+            <xsd:element name="xmlBytes" type="tns:outputType"/>
+            <xsd:element name="xmlBytesIn" type="xsd:base64Binary"/>
+            <xsd:element name="xmlInput" type="xsd:base64Binary"/>
+            <xsd:element name="xmlString" type="xsd:string"/>
+            <xsd:element name="xmlTree">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:any namespace="##any" processContents="strict"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.xml.transformxml"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/xml/5.0/xmlExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.xml.transformxml">
+            <import namespace="http://schemas.tibco.com/bw/plugins/xml/5.0/xmlExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/xml/5.0/xmlExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/xml/5.0/xmlExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:XMLTransformException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:UnsupportedEncodingException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:MissingByteCountException"/>
+                </choice>
+            </complexType>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="Kripta"
         createdOn="Thu Nov 25 09:42:12 CET 2021" description=""
@@ -1222,7 +1208,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="933"
+                                    <layoutConstraint x="1023"
                                     xsi:type="notation:Bounds" y="147"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.log">
@@ -1296,7 +1282,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="853"
+                                    x="957"
                                     xsi:type="notation:Bounds" y="147"/>
                                     </children>
                                     <children type="4002 bw.jdbc.JDBCQuery">
@@ -1549,7 +1535,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="774"
+                                    x="877"
                                     xsi:type="notation:Bounds" y="147"/>
                                     </children>
                                     <children type="4002 bw.parse.renderdata">
@@ -1700,6 +1686,43 @@
                                     x="511"
                                     xsi:type="notation:Bounds" y="147"/>
                                     </children>
+                                    <children type="4002 bw.xml.transformxml">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.15"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="785"
+                                    xsi:type="notation:Bounds" y="147"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1713,7 +1736,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="408"
-                                    width="1088" xsi:type="notation:Bounds"/>
+                                    width="1183" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -2253,7 +2276,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="1201" width="1433" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="1201" width="1528" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -2380,7 +2403,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.15" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -2467,6 +2490,17 @@
             <element href="//0/@process/@activity/@activity/@links/@children.14"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.15"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.15"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -2503,6 +2537,8 @@
             namespace="http://www.example.org/totalprice" prefix="tns15"/>
         <tibex:namespaceItem
             namespace="http://www.example.org/ShoppingChart" prefix="tns16"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/transformxml" prefix="tns17"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/AccountOrder"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/OrderNow"/>
@@ -2596,6 +2632,11 @@
             name="_error_Rethrow1" sca-bpel:internal="true"/>
         <bpws:variable element="ns29:ActivityErrorData"
             name="_error_Rethrow2" sca-bpel:internal="true"/>
+        <bpws:variable element="ns30:textInput"
+            name="TransformXml-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns30:xmlString" name="TransformXml" sca-bpel:internal="true"/>
+        <bpws:variable element="ns31:ActivityErrorData"
+            name="_error_TransformXml" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2805,10 +2846,11 @@
                 <bpws:link name="QueryAdToThrow" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                 <bpws:link name="WriteFileToLog1" tibex:linkType="SUCCESS"/>
                 <bpws:link name="RenderdataToWriteFile" tibex:linkType="SUCCESS"/>
-                <bpws:link name="RenderXmlToWriteFile" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RenderXmlToInvoice" tibex:linkType="SUCCESS"/>
                 <bpws:link name="MapperToQueryAd" tibex:linkType="SUCCESSWITHCONDITION"/>
                 <bpws:link name="MapperToThrowPM" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                 <bpws:link name="Mapper1ToRenderdata" tibex:linkType="SUCCESS"/>
+                <bpws:link name="TransformXmlToInvoice" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -2954,7 +2996,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT *&#xa;  FROM &quot;ecommerce&quot;.carrello&#xa;  where id=?&#xa;"
+                                    sqlStatement="SELECT *&#xa;  FROM &quot;ecommerce&quot;.carrello&#xa;  where id_user=?&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <PreparedParameters DataType="4"
                                     DataTypeDisplayValue="INTEGER" ParameterName="id_user"/>
@@ -3169,14 +3211,14 @@
                     name="Invoice" outputVariable="Invoice"
                     tibex:xpdlId="554c3e90-09f1-4146-bc4c-682b1e8c96c9" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="RenderXmlToWriteFile"/>
+                        <bpws:target linkName="TransformXmlToInvoice"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="WriteFileToLog1"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/namespaces/tnt/plugins/file&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RenderXml&quot;/>&lt;xsl:template name=&quot;WriteFile-input&quot; match=&quot;/&quot;>&lt;tns5:WriteActivityInputTextClass>&lt;textContent>&lt;xsl:value-of select=&quot;$RenderXml&quot;/>&lt;/textContent>&lt;/tns5:WriteActivityInputTextClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/namespaces/tnt/plugins/file&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;TransformXml&quot;/>&lt;xsl:template name=&quot;Invoice-input&quot; match=&quot;/&quot;>&lt;tns5:WriteActivityInputTextClass>&lt;textContent>&lt;xsl:value-of select=&quot;$TransformXml&quot;/>&lt;/textContent>&lt;/tns5:WriteActivityInputTextClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.file.write"
@@ -3208,7 +3250,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns17=&quot;http://tns.tibco.com/bw/activity/render/xsd/+5e5c09ab-ab5a-4fa1-be1c-cc134d9c4202+input&quot; xmlns:tns6=&quot;http://www.example.org/RenderOrder&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;QueryCh&quot;/>&#xa;    &lt;xsl:template name=&quot;Renderdata-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns17:Rows>&#xa;            &lt;xsl:for-each select=&quot;$QueryCh/Record&quot;>&#xa;                &lt;tns6:RenderOrder>&#xa;                    &lt;xsl:if test=&quot;product&quot;>&#xa;                        &lt;tns6:product>&#xa;                            &lt;xsl:value-of select=&quot;product&quot;/>&#xa;                        &lt;/tns6:product>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;price&quot;>&#xa;                        &lt;tns6:price>&#xa;                            &lt;xsl:value-of select=&quot;price&quot;/>&#xa;                        &lt;/tns6:price>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;quantity&quot;>&#xa;                        &lt;tns6:quantity>&#xa;                            &lt;xsl:value-of select=&quot;quantity&quot;/>&#xa;                        &lt;/tns6:quantity>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/tns6:RenderOrder>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns17:Rows>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns18=&quot;http://tns.tibco.com/bw/activity/render/xsd/+5e5c09ab-ab5a-4fa1-be1c-cc134d9c4202+input&quot; xmlns:tns6=&quot;http://www.example.org/RenderOrder&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;QueryCh&quot;/>&#xa;    &lt;xsl:template name=&quot;Renderdata-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns18:Rows>&#xa;            &lt;xsl:for-each select=&quot;$QueryCh/Record&quot;>&#xa;                &lt;tns6:RenderOrder>&#xa;                    &lt;xsl:if test=&quot;product&quot;>&#xa;                        &lt;tns6:product>&#xa;                            &lt;xsl:value-of select=&quot;product&quot;/>&#xa;                        &lt;/tns6:product>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;price&quot;>&#xa;                        &lt;tns6:price>&#xa;                            &lt;xsl:value-of select=&quot;price&quot;/>&#xa;                        &lt;/tns6:price>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;quantity&quot;>&#xa;                        &lt;tns6:quantity>&#xa;                            &lt;xsl:value-of select=&quot;quantity&quot;/>&#xa;                        &lt;/tns6:quantity>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/tns6:RenderOrder>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns18:Rows>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -3235,11 +3277,11 @@
                         <bpws:target linkName="RenderdataToWriteFile"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="RenderXmlToWriteFile"/>
+                        <bpws:source linkName="RenderXmlToInvoice"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.example.org/Invoice&quot; xmlns:tns8=&quot;http://www.example.org/UserAccount&quot; xmlns:tns9=&quot;http://www.example.org/OrderNow&quot; xmlns:tns2=&quot;http://www.example.org/AccountOrder&quot; xmlns:tns10=&quot;http://www.example.org/paymentcontrol&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tns15=&quot;http://www.example.org/totalprice&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;QueryAd&quot;/>&#xa;    &lt;xsl:param name=&quot;Renderdata&quot;/>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:param name=&quot;QueryPM&quot;/>&#xa;    &lt;xsl:param name=&quot;PaymentCheck&quot;/>&#xa;    &lt;xsl:param name=&quot;TotalPrice&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderXml-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns7:Invoice>&#xa;            &lt;tns7:personaldata>&#xa;                &lt;xsl:if test=&quot;$Start/tns9:firstname&quot;>&#xa;                    &lt;tns8:FirstName>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns9:firstname&quot;/>&#xa;                    &lt;/tns8:FirstName>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns9:lastname&quot;>&#xa;                    &lt;tns8:LastName>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns9:lastname&quot;/>&#xa;                    &lt;/tns8:LastName>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns9:Shop/tns2:Username&quot;>&#xa;                    &lt;tns8:Username>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns9:Shop/tns2:Username&quot;/>&#xa;                    &lt;/tns8:Username>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns9:dateofbirth&quot;>&#xa;                    &lt;tns8:DateOfBirth>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns9:dateofbirth&quot;/>&#xa;                    &lt;/tns8:DateOfBirth>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$Start/tns9:taxcode&quot;>&#xa;                    &lt;tns8:TaxCode>&#xa;                        &lt;xsl:value-of select=&quot;$Start/tns9:taxcode&quot;/>&#xa;                    &lt;/tns8:TaxCode>&#xa;                &lt;/xsl:if>&#xa;            &lt;/tns7:personaldata>&#xa;            &lt;tns7:address>&#xa;                &lt;xsl:if test=&quot;$QueryAd/Record[1]/street&quot;>&#xa;                    &lt;tns8:Street>&#xa;                        &lt;xsl:value-of select=&quot;$QueryAd/Record[1]/street&quot;/>&#xa;                    &lt;/tns8:Street>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$QueryAd/Record[1]/city&quot;>&#xa;                    &lt;tns8:City>&#xa;                        &lt;xsl:value-of select=&quot;$QueryAd/Record[1]/city&quot;/>&#xa;                    &lt;/tns8:City>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$QueryAd/Record[1]/zipcode&quot;>&#xa;                    &lt;tns8:ZipCode>&#xa;                        &lt;xsl:value-of select=&quot;$QueryAd/Record[1]/zipcode&quot;/>&#xa;                    &lt;/tns8:ZipCode>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$QueryAd/Record[1]/country&quot;>&#xa;                    &lt;tns8:Country>&#xa;                        &lt;xsl:value-of select=&quot;$QueryAd/Record[1]/country&quot;/>&#xa;                    &lt;/tns8:Country>&#xa;                &lt;/xsl:if>&#xa;            &lt;/tns7:address>&#xa;            &lt;xsl:choose>&#xa;                &lt;xsl:when test=&quot;$PaymentCheck/tns10:paymentcheck = &amp;quot;CC&amp;quot;&quot;>&#xa;                    &lt;tns7:payment>&#xa;                        &lt;xsl:value-of select=&quot;concat('Pagamento con Carta di Credito: ', xsd:string($QueryPM/Record[1]/creditcard))&quot;/>&#xa;                    &lt;/tns7:payment>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;$PaymentCheck/tns10:paymentcheck = &amp;quot;DC&amp;quot;&quot;>&#xa;                    &lt;tns7:payment>&#xa;                        &lt;xsl:value-of select=&quot;concat('Pagamento con Carta di Debito: ', xsd:string($QueryPM/Record[1]/debitcard))&quot;/>&#xa;                    &lt;/tns7:payment>&#xa;                &lt;/xsl:when>&#xa;                &lt;xsl:when test=&quot;$PaymentCheck/tns10:paymentcheck = &amp;quot;PP&amp;quot;&quot;>&#xa;                    &lt;tns7:payment>&#xa;                        &lt;xsl:value-of select=&quot;concat('Pagamento con Paypal: ', ($QueryPM/Record[1]/paypal))&quot;/>&#xa;                    &lt;/tns7:payment>&#xa;                &lt;/xsl:when>&#xa;            &lt;/xsl:choose>&#xa;            &lt;tns7:chart>&#xa;                &lt;xsl:value-of select=&quot;$Renderdata&quot;/>&#xa;            &lt;/tns7:chart>&#xa;            &lt;tns7:total>&#xa;                &lt;xsl:value-of select=&quot;sum($TotalPrice/tns15:prices)&quot;/>&#xa;            &lt;/tns7:total>&#xa;        &lt;/tns7:Invoice>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.example.org/Invoice&quot; xmlns:tns8=&quot;http://www.example.org/UserAccount&quot; xmlns:tns9=&quot;http://www.example.org/OrderNow&quot; xmlns:tns2=&quot;http://www.example.org/AccountOrder&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tns15=&quot;http://www.example.org/totalprice&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;QueryAd&quot;/>&lt;xsl:param name=&quot;Renderdata&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;QueryPM&quot;/>&lt;xsl:param name=&quot;TotalPrice&quot;/>&lt;xsl:template name=&quot;RenderXml-input&quot; match=&quot;/&quot;>&lt;tns7:Invoice>&lt;tns7:personaldata>&lt;xsl:if test=&quot;$Start/tns9:firstname&quot;>&lt;tns8:FirstName>&lt;xsl:value-of select=&quot;$Start/tns9:firstname&quot;/>&lt;/tns8:FirstName>&lt;/xsl:if>&lt;xsl:if test=&quot;$Start/tns9:lastname&quot;>&lt;tns8:LastName>&lt;xsl:value-of select=&quot;$Start/tns9:lastname&quot;/>&lt;/tns8:LastName>&lt;/xsl:if>&lt;xsl:if test=&quot;$Start/tns9:Shop/tns2:Username&quot;>&lt;tns8:Username>&lt;xsl:value-of select=&quot;$Start/tns9:Shop/tns2:Username&quot;/>&lt;/tns8:Username>&lt;/xsl:if>&lt;xsl:if test=&quot;$Start/tns9:dateofbirth&quot;>&lt;tns8:DateOfBirth>&lt;xsl:value-of select=&quot;$Start/tns9:dateofbirth&quot;/>&lt;/tns8:DateOfBirth>&lt;/xsl:if>&lt;xsl:if test=&quot;$Start/tns9:taxcode&quot;>&lt;tns8:TaxCode>&lt;xsl:value-of select=&quot;$Start/tns9:taxcode&quot;/>&lt;/tns8:TaxCode>&lt;/xsl:if>&lt;/tns7:personaldata>&lt;tns7:address>&lt;xsl:if test=&quot;$QueryAd/Record[1]/street&quot;>&lt;tns8:Street>&lt;xsl:value-of select=&quot;$QueryAd/Record[1]/street&quot;/>&lt;/tns8:Street>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryAd/Record[1]/city&quot;>&lt;tns8:City>&lt;xsl:value-of select=&quot;$QueryAd/Record[1]/city&quot;/>&lt;/tns8:City>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryAd/Record[1]/zipcode&quot;>&lt;tns8:ZipCode>&lt;xsl:value-of select=&quot;$QueryAd/Record[1]/zipcode&quot;/>&lt;/tns8:ZipCode>&lt;/xsl:if>&lt;xsl:if test=&quot;$QueryAd/Record[1]/country&quot;>&lt;tns8:Country>&lt;xsl:value-of select=&quot;$QueryAd/Record[1]/country&quot;/>&lt;/tns8:Country>&lt;/xsl:if>&lt;/tns7:address>&lt;xsl:choose>&lt;xsl:when test=&quot;$Start/tns9:Shop/tns2:PayMethod = &amp;quot;CC&amp;quot;&quot;>&lt;tns7:payment>&lt;xsl:value-of select=&quot;concat('Pagamento con Carta di Credito: ', xsd:string($QueryPM/Record[1]/creditcard))&quot;/>&lt;/tns7:payment>&lt;/xsl:when>&lt;xsl:when test=&quot;$Start/tns9:Shop/tns2:PayMethod = &amp;quot;DC&amp;quot;&quot;>&lt;tns7:payment>&lt;xsl:value-of select=&quot;concat('Pagamento con Carta di Debito: ', xsd:string($QueryPM/Record[1]/debitcard))&quot;/>&lt;/tns7:payment>&lt;/xsl:when>&lt;xsl:when test=&quot;$Start/tns9:Shop/tns2:PayMethod = &amp;quot;PP&amp;quot;&quot;>&lt;tns7:payment>&lt;xsl:value-of select=&quot;concat('Pagamento con Paypal: ', ($QueryPM/Record[1]/paypal))&quot;/>&lt;/tns7:payment>&lt;/xsl:when>&lt;/xsl:choose>&lt;tns7:chart>&lt;xsl:value-of select=&quot;$Renderdata&quot;/>&lt;/tns7:chart>&lt;tns7:total>&lt;xsl:value-of select=&quot;sum($TotalPrice/tns15:prices, ' euro')&quot;/>&lt;/tns7:total>&lt;/tns7:Invoice>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -3336,6 +3378,40 @@
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Mapper"/>
                                     <value
                                     inputQName="totalprice:variousprices" xsi:type="generalactivities:Mapper"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="TransformXml-input"
+                    name="TransformXml" outputVariable="TransformXml"
+                    tibex:xpdlId="e7379e2e-fe60-415f-8eed-d723a022363b" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="RenderXmlToInvoice"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="TransformXmlToInvoice"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns17=&quot;http://www.tibco.com/namespaces/tnt/plugins/transformxml&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RenderXml&quot;/>&lt;xsl:template name=&quot;TransformXml-input&quot; match=&quot;/&quot;>&lt;tns17:textInput>&lt;tns17:xmlString>&lt;xsl:value-of select=&quot;$RenderXml&quot;/>&lt;/tns17:xmlString>&lt;/tns17:textInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.xml.transformxml"
+                            version="6.0.0.20121128"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:palettexml="http://ns.tibco.com/bw/palette/xmlpalette" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/xmlpalette#//TransformXml"/>
+                                    <value inputOutputStyle="text"
+                                    stylesheet="Schemas/EseguiOrdine/invoicestyle.xslt"
+                                    xsi:type="palettexml:TransformXml" xsltEngine="TIBCO GenXDM XSLT 2.0"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>
