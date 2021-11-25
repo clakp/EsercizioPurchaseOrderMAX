@@ -22,65 +22,6 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <tibex:VariableDescriptor type="MemorySaving">
-        <task name="flow">
-            <endingVariables>
-                <variable>Start</variable>
-                <variable>Mapper</variable>
-                <variable>JDBCQuery</variable>
-            </endingVariables>
-        </task>
-        <task name="JDBCQuery">
-            <endingVariables>
-                <variable>JDBCQuery-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Mapper">
-            <endingVariables>
-                <variable>Mapper-input</variable>
-            </endingVariables>
-        </task>
-        <task name="OnTheWay">
-            <endingVariables>
-                <variable>OnTheWay-input</variable>
-            </endingVariables>
-        </task>
-        <task name="OutOfStock">
-            <endingVariables>
-                <variable>OutOfStock-input</variable>
-            </endingVariables>
-        </task>
-        <task name="NotThatQuantity">
-            <endingVariables>
-                <variable>NotThatQuantity-input</variable>
-            </endingVariables>
-        </task>
-        <task name="NotExist">
-            <endingVariables>
-                <variable>NotExist-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log1">
-            <endingVariables>
-                <variable>Log1-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log2">
-            <endingVariables>
-                <variable>Log2-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log">
-            <endingVariables>
-                <variable>Log-input</variable>
-            </endingVariables>
-        </task>
-        <task name="Log3">
-            <endingVariables>
-                <variable>Log3-input</variable>
-            </endingVariables>
-        </task>
-    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"

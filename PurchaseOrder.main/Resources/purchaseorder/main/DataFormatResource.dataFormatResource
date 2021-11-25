@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RenderOrder="http://www.example.org/RenderOrder" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_BgN5MU3QEeyzpcQ5iXWxfQ" name="purchaseorder.main.DataFormatResource" type="dataformat:DataFormat">
   <imports xmi:id="_1a-wQE3QEeyzpcQ5iXWxfQ" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/RenderOrder"/>
-  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_BgPHUE3QEeyzpcQ5iXWxfQ" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="Carriage Return/Line Feed (windows)" fillCharacter="Space" schemaElementQName="RenderOrder:RenderOrder" fieldOffsetsStr="product(0,0)&#xA;price(0,0)&#xA;quantity(0,0)">
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_BgPHUE3QEeyzpcQ5iXWxfQ" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="RenderOrder:RenderOrder" fieldOffsetsStr="product(0,0)&#xA;price(0,0)&#xA;quantity(0,0)">
     <fieldOffsets xmi:id="_1cArAE3QEeyzpcQ5iXWxfQ" name="product"/>
     <fieldOffsets xmi:id="_1cArAU3QEeyzpcQ5iXWxfQ" name="price"/>
     <fieldOffsets xmi:id="_1cArAk3QEeyzpcQ5iXWxfQ" name="quantity"/>
