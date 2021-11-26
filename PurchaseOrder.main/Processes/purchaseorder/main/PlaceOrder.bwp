@@ -14,6 +14,7 @@
     xmlns:ns6="http://www.example.org/FaultAd"
     xmlns:ns7="http://www.example.org/FaultPM"
     xmlns:ns8="http://www.example.org/FaultChart"
+    xmlns:ns9="http://tns.tibco.com/bw/palette/internal/activityerror+c023099a-b689-4562-9a3f-d80487c6fec4"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -196,6 +197,27 @@
             </xs:complexType>
             <xs:element name="ActivityInput" type="tns:LogParametersType"/>
         </xs:schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+c023099a-b689-4562-9a3f-d80487c6fec4"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/UsernameFault"
+            xmlns:Q2="http://www.example.org/FaultAd"
+            xmlns:Q3="http://www.example.org/FaultPM"
+            xmlns:Q4="http://www.example.org/FaultChart" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+c023099a-b689-4562-9a3f-d80487c6fec4">
+            <import namespace="http://www.example.org/FaultChart"/>
+            <import namespace="http://www.example.org/FaultPM"/>
+            <import namespace="http://www.example.org/FaultAd"/>
+            <import namespace="http://www.example.org/UsernameFault"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:UnFault"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q2:FaultAd"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q3:FaultPM"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q4:FaultChart"/>
+                </choice>
+            </complexType>
+        </schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20211125120231PLT"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
@@ -1288,6 +1310,9 @@
             name="Reply3-input" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns1:operationResponse"
             name="Reply4-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns9:ActivityErrorData"
+            name="_error_EseguiOrdineOrchestration" sca-bpel:internal="true"/>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>

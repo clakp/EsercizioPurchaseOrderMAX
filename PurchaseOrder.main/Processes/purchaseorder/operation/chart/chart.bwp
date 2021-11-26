@@ -40,6 +40,92 @@
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property"
     xmlns:tns="http://www.example.org/QuantityControl" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="End">
+            <endingVariables>
+                <variable>QueryCart</variable>
+                <variable>TotalPrice</variable>
+            </endingVariables>
+        </task>
+        <task name="Log">
+            <endingVariables>
+                <variable>Log-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log1">
+            <endingVariables>
+                <variable>Log1-input</variable>
+            </endingVariables>
+        </task>
+        <task name="InvokeCercaArticolo">
+            <endingVariables>
+                <variable>InvokeCercaArticolo-input</variable>
+                <variable>RenderJSON</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryMag">
+            <endingVariables>
+                <variable>QueryMag-input</variable>
+            </endingVariables>
+        </task>
+        <task name="RenderJSON">
+            <endingVariables>
+                <variable>RenderJSON-input</variable>
+            </endingVariables>
+        </task>
+        <task name="InsertCarrello">
+            <endingVariables>
+                <variable>InsertCarrello-input</variable>
+                <variable>InsertCarrello</variable>
+                <variable>ParseJSON</variable>
+                <variable>QueryMag</variable>
+                <variable>QuaContr</variable>
+            </endingVariables>
+        </task>
+        <task name="ParseJSON">
+            <endingVariables>
+                <variable>ParseJSON-input</variable>
+                <variable>InvokeCercaArticolo</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryCart">
+            <endingVariables>
+                <variable>QueryCart-input</variable>
+                <variable>Start</variable>
+            </endingVariables>
+        </task>
+        <task name="TotalPrice">
+            <endingVariables>
+                <variable>TotalPrice-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Throw">
+            <endingVariables>
+                <variable>Throw-input</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryCaQuantity">
+            <endingVariables>
+                <variable>QueryCaQuantity-input</variable>
+            </endingVariables>
+        </task>
+        <task name="QuaContr">
+            <endingVariables>
+                <variable>QuaContr-input</variable>
+                <variable>QueryCaQuantity</variable>
+            </endingVariables>
+        </task>
+        <task name="Log2">
+            <endingVariables>
+                <variable>Log2-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log3">
+            <endingVariables>
+                <variable>Log3-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"

@@ -1,0 +1,82 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "SubCercaArticolo",
+    "description" : "CercaArticolo service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/subcercaarticolo1" : {
+      "post" : {
+        "summary" : "postSubCercaArticolo",
+        "description" : "postSubCercaArticolo",
+        "operationId" : "post-subcercaarticolo1",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Storage"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Storage to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Storage"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Storage" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "$ref" : "#/definitions/ProductType"
+        },
+        "Lack" : {
+          "$ref" : "#/definitions/LackType"
+        }
+      }
+    },
+    "LackType" : {
+      "type" : "object",
+      "required" : [ "LackMessage" ],
+      "properties" : {
+        "LackMessage" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ProductType" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "integer"
+        },
+        "quantity" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "availability" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

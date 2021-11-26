@@ -42,6 +42,112 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="End">
+            <endingVariables>
+                <variable>QueryCa</variable>
+                <variable>TotalPrice</variable>
+            </endingVariables>
+        </task>
+        <task name="Log">
+            <endingVariables>
+                <variable>Log-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log1">
+            <endingVariables>
+                <variable>Log1-input</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryCa">
+            <endingVariables>
+                <variable>QueryCa-input</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryPM">
+            <endingVariables>
+                <variable>QueryPM-input</variable>
+            </endingVariables>
+        </task>
+        <task name="ThrowCh">
+            <endingVariables>
+                <variable>ThrowCh-input</variable>
+            </endingVariables>
+        </task>
+        <task name="QueryAd">
+            <endingVariables>
+                <variable>QueryAd-input</variable>
+                <variable>PaymentCheck</variable>
+            </endingVariables>
+        </task>
+        <task name="ThrowPM">
+            <endingVariables>
+                <variable>ThrowPM-input</variable>
+            </endingVariables>
+        </task>
+        <task name="ThrowAd">
+            <endingVariables>
+                <variable>ThrowAd-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Invoice">
+            <endingVariables>
+                <variable>Invoice-input</variable>
+                <variable>Invoice</variable>
+                <variable>TransformXml</variable>
+            </endingVariables>
+        </task>
+        <task name="Renderdata">
+            <endingVariables>
+                <variable>Renderdata-input</variable>
+            </endingVariables>
+        </task>
+        <task name="RenderXml">
+            <endingVariables>
+                <variable>RenderXml-input</variable>
+                <variable>Start</variable>
+                <variable>QueryPM</variable>
+                <variable>QueryAd</variable>
+                <variable>Renderdata</variable>
+            </endingVariables>
+        </task>
+        <task name="PaymentCheck">
+            <endingVariables>
+                <variable>PaymentCheck-input</variable>
+            </endingVariables>
+        </task>
+        <task name="TotalPrice">
+            <endingVariables>
+                <variable>TotalPrice-input</variable>
+            </endingVariables>
+        </task>
+        <task name="TransformXml">
+            <endingVariables>
+                <variable>TransformXml-input</variable>
+                <variable>RenderXml</variable>
+            </endingVariables>
+        </task>
+        <task name="Log2">
+            <endingVariables>
+                <variable>Log2-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log3">
+            <endingVariables>
+                <variable>Log3-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log4">
+            <endingVariables>
+                <variable>Log4-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log5">
+            <endingVariables>
+                <variable>Log5-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"
