@@ -859,8 +859,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.1"/>
 
                                     <layoutConstraint
-                                    x="345"
-                                    xsi:type="notation:Bounds" y="340"/>
+                                    x="395"
+                                    xsi:type="notation:Bounds" y="254"/>
                                     </children>
 
                                     <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Reply">
@@ -915,8 +915,8 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="167"
-                                    xsi:type="notation:Bounds" y="181"/>
+                                    x="177"
+                                    xsi:type="notation:Bounds" y="95"/>
                                     </children>
 
                                     <children type="4002">
@@ -969,62 +969,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint
-                                    x="249"
-                                    xsi:type="notation:Bounds" y="28"/>
-                                    </children>
-
-                                    <children type="4002">
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <styles
-                                    fontName="Segoe UI"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-
-                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.4"/>
-
-                                    <layoutConstraint
-                                    x="345"
-                                    xsi:type="notation:Bounds" y="181"/>
+                                    x="395"
+                                    xsi:type="notation:Bounds" y="95"/>
                                     </children>
 
                                     <children type="4002 bw.generalactivities.sleep">
@@ -1074,13 +1020,13 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
 
-                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.5"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.4"/>
 
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="249"
-                                    xsi:type="notation:Bounds" y="181"/>
+                                    x="299"
+                                    xsi:type="notation:Bounds" y="95"/>
                                     </children>
 
                                     <children type="4002">
@@ -1130,11 +1076,11 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
 
-                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.6"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@activities.5"/>
 
                                     <layoutConstraint
-                                    x="502"
-                                    xsi:type="notation:Bounds" y="181"/>
+                                    x="552"
+                                    xsi:type="notation:Bounds" y="95"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1178,8 +1124,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0"/>
 
                                     <layoutConstraint
-                                    height="454"
-                                    width="733" xsi:type="notation:Bounds"/>
+                                    height="359"
+                                    width="844" xsi:type="notation:Bounds"/>
                                     </children>
 
                                     <children type="4029">
@@ -1379,8 +1325,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers"/>
 
                                     <layoutConstraint
-                                    height="662"
-                                    width="743"
+                                    height="567"
+                                    width="854"
                                     x="21"
                                     xsi:type="notation:Bounds" y="147"/>
                                     </children>
@@ -1396,8 +1342,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
 
                                     <layoutConstraint
-                                    height="810"
-                                    width="803" xsi:type="notation:Bounds"/>
+                                    height="715"
+                                    width="914" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1456,8 +1402,8 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0"/>
                                     <layoutConstraint
-                                    height="829"
-                                    width="865"
+                                    height="734"
+                                    width="976"
                                     x="2" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1470,7 +1416,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    height="859" width="995" xsi:type="notation:Bounds"/>
+                                    height="764" width="995" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1484,7 +1430,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="869"
+                                    <layoutConstraint height="901"
                                     width="1005" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -1581,8 +1527,7 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.0"/>
-            <bendpoints
-                points="[25, 13, -56, -73]$[81, 13, 0, -73]$[81, 62, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, 8, -106, 8]$[107, 8, -24, 8]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.1/@children.1/@children.0/@children.0/@children.0"
@@ -1597,7 +1542,7 @@
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.5" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.4" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1607,7 +1552,7 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.0"
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.4"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
@@ -1615,53 +1560,41 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.2"/>
-            <bendpoints
-                points="[-5, -24, -168, 43]$[-5, -67, -168, 0]$[139, -67, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.4" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.4"/>
-            <bendpoints
-                points="[0, 25, -259, -220]$[0, 245, -259, 0]$[235, 245, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.4"
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.3"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
             <styles fontColor="255" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.5"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[0, 25, 0, -134]$[0, 135, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.4"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.6" type="4006">
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.5" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.6"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.4"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catch.0/@activity/@activity/@links/@children.5"/>
+            <bendpoints
+                points="[11, 25, -167, -134]$[11, 159, -167, 0]$[154, 159, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1724,9 +1657,7 @@
             name="_error_CercaArticoloOrchestration" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:ActivityInput" name="Log4-input" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:postResponse"
-            name="ErrorCode_1-input" sca-bpel:internal="true"/>
-        <bpws:variable messageType="ns:postResponse"
-            name="ErrorCode2_3_4-input" sca-bpel:internal="true"/>
+            name="ReplyOnErrorCode-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns3:ProductQuery"
             name="CercaArticoloOrchestration1-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns2:Storage"
@@ -1764,18 +1695,17 @@
                                     <bpws:flow name="flow2">
                                     <bpws:links>
                                     <bpws:link
-                                    name="Log2ToSleep" tibex:linkType="SUCCESSWITHCONDITION"/>
+                                    name="Log2ToSleep" tibex:linkType="SUCCESS"/>
                                     <bpws:link
-                                    name="ErrorCode_1ToCercaArticoloOrchestration1" tibex:linkType="SUCCESS"/>
-                                    <bpws:link
-                                    name="Log2ToReply1" tibex:linkType="SUCCESSWITHCONDITION"/>
+                                    name="ErrorCode_1ToCercaArticoloOrchestration1" tibex:linkType="SUCCESSWITHCONDITION"/>
                                     <bpws:link
                                     name="SleepToCercaArticoloOrchestration1" tibex:linkType="SUCCESS"/>
-                                    <bpws:link name="Log2ToLog4" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                                     <bpws:link
                                     name="CercaArticoloOrchestration1ToLog4" tibex:linkType="ERROR"/>
                                     <bpws:link
                                     name="CercaArticoloOrchestration1ToLog5" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="ErrorCode_1ToLog4" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                                     </bpws:links>
                                     <bpws:extensionActivity>
                                     <tibex:activityExtension
@@ -1784,31 +1714,7 @@
                                     tibex:xpdlId="b2d79d04-f5a2-4b60-a557-053780cf3687" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:sources>
                                     <bpws:source linkName="Log2ToSleep">
-                                    <tibex:DesignExpression>
-
-                                    <tibex:expression
-                                    expression="$LackOfGoods/ns4:ErrorCode='1'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
-                                    </tibex:DesignExpression>
-
-                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$LackOfGoods/ns4:ErrorCode='1']]></bpws:transitionCondition>
-                                    </bpws:source>
-                                    <bpws:source linkName="Log2ToReply1">
-                                    <tibex:DesignExpression>
-
-                                    <tibex:expression
-                                    expression="$LackOfGoods/ns4:ErrorCode='2' or $LackOfGoods/ns4:ErrorCode='3' or $LackOfGoods/ns4:ErrorCode='4'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
-                                    </tibex:DesignExpression>
-
-                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$LackOfGoods/ns4:ErrorCode='2' or $LackOfGoods/ns4:ErrorCode='3' or $LackOfGoods/ns4:ErrorCode='4']]></bpws:transitionCondition>
-                                    </bpws:source>
-                                    <bpws:source linkName="Log2ToLog4">
-                                    <tibex:DesignExpression>
-
-                                    <tibex:expression
-                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
-                                    </tibex:DesignExpression>
-
-                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                                    <tibex:DesignExpression/>
                                     </bpws:source>
                                     </bpws:sources>
                                     <tibex:inputBindings>
@@ -1842,8 +1748,8 @@
                                     name="Log4"
                                     tibex:xpdlId="fc85a7aa-e4e3-40cb-bbab-9e867acdc519" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="Log2ToLog4"/>
                                     <bpws:target linkName="CercaArticoloOrchestration1ToLog4"/>
+                                    <bpws:target linkName="ErrorCode_1ToLog4"/>
                                     </bpws:targets>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
@@ -1870,39 +1776,41 @@
                                     </tibex:config>
                                     </tibex:activityExtension>
                                     </bpws:extensionActivity>
-                                    <bpws:reply name="ErrorCode_1"
+                                    <bpws:reply
+                                    name="ReplyOnErrorCode"
                                     operation="post"
                                     partnerLink="cercaarticolo"
                                     portType="ns:cercaarticolo"
-                                    tibex:xpdlId="b5e4bd1a-1433-4137-9ece-1adaf02cfb1f" variable="ErrorCode_1-input">
+                                    tibex:xpdlId="b5e4bd1a-1433-4137-9ece-1adaf02cfb1f" variable="ReplyOnErrorCode-input">
                                     <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns4="http://xmlns.example.com/20211123175254PLT" xmlns:tns2="http://www.example.org/Storage" version="2.0"&gt;&lt;xsl:template name="Reply-input" match="/"&gt;&lt;tns4:postResponse&gt;&lt;Response&gt;&lt;tns2:Storage&gt;&lt;tns2:Lack&gt;&lt;tns2:LackMessage&gt;&lt;xsl:value-of select="'Articolo attualmente non disponibile ma in arrivo'"/&gt;&lt;/tns2:LackMessage&gt;&lt;/tns2:Lack&gt;&lt;/tns2:Storage&gt;&lt;/Response&gt;&lt;/tns4:postResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns4="http://xmlns.example.com/20211123175254PLT" xmlns:tns2="http://www.example.org/Storage" xmlns:tns3="http://www.example.org/LackOfGoods" version="2.0"&gt;&lt;xsl:param name="LackOfGoods"/&gt;&lt;xsl:template name="ReplyOnErrorCode-input" match="/"&gt;&lt;tns4:postResponse&gt;&lt;Response&gt;&lt;tns2:Storage&gt;&lt;tns2:Lack&gt;&lt;xsl:choose&gt;&lt;xsl:when test="$LackOfGoods/tns3:ErrorCode='2' or $LackOfGoods/tns3:ErrorCode='3' or $LackOfGoods/tns3:ErrorCode='4'"&gt;&lt;tns2:LackMessage&gt;&lt;xsl:value-of select="$LackOfGoods/tns3:LackMessage"/&gt;&lt;/tns2:LackMessage&gt;&lt;/xsl:when&gt;&lt;xsl:otherwise&gt;&lt;tns2:LackMessage&gt;&lt;xsl:value-of select="'Articolo attualmente non disponibile ma in arrivo'"/&gt;&lt;/tns2:LackMessage&gt;&lt;/xsl:otherwise&gt;&lt;/xsl:choose&gt;&lt;/tns2:Lack&gt;&lt;/tns2:Storage&gt;&lt;/Response&gt;&lt;/tns4:postResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                     <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://xmlns.example.com/20211123175254PLT&quot; xmlns:tns2=&quot;http://www.example.org/Storage&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;Reply-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:Storage>&#xa;            &lt;tns2:Lack>&#xa;                &lt;tns2:LackMessage>&#xa;                    &lt;xsl:value-of select=&quot;'Articolo attualmente non disponibile ma in arrivo'&quot;/>&#xa;                &lt;/tns2:LackMessage>&#xa;            &lt;/tns2:Lack>&#xa;        &lt;/tns2:Storage>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://xmlns.example.com/20211123175254PLT&quot; xmlns:tns2=&quot;http://www.example.org/Storage&quot; xmlns:tns3=&quot;http://www.example.org/LackOfGoods&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;LackOfGoods&quot;/>&#xa;    &lt;xsl:template name=&quot;ReplyOnErrorCode-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:Storage>&#xa;            &lt;tns2:Lack>&#xa;                &lt;xsl:choose>&#xa;                    &lt;xsl:when test=&quot;$LackOfGoods/tns3:ErrorCode='2' or $LackOfGoods/tns3:ErrorCode='3' or $LackOfGoods/tns3:ErrorCode='4'&quot;>&#xa;                        &lt;tns2:LackMessage>&#xa;                            &lt;xsl:value-of select=&quot;$LackOfGoods/tns3:LackMessage&quot;/>&#xa;                        &lt;/tns2:LackMessage>&#xa;                    &lt;/xsl:when>&#xa;                    &lt;xsl:otherwise>&#xa;                        &lt;tns2:LackMessage>&#xa;                            &lt;xsl:value-of select=&quot;'Articolo attualmente non disponibile ma in arrivo'&quot;/>&#xa;                        &lt;/tns2:LackMessage>&#xa;                    &lt;/xsl:otherwise>&#xa;                &lt;/xsl:choose>&#xa;            &lt;/tns2:Lack>&#xa;        &lt;/tns2:Storage>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <bpws:targets>
                                     <bpws:target linkName="Log2ToSleep"/>
                                     </bpws:targets>
                                     <bpws:sources>
-                                    <bpws:source linkName="ErrorCode_1ToCercaArticoloOrchestration1"/>
+                                    <bpws:source linkName="ErrorCode_1ToCercaArticoloOrchestration1">
+                                    <tibex:DesignExpression>
+
+                                    <tibex:expression
+                                    expression="$LackOfGoods/ns4:ErrorCode='1'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$LackOfGoods/ns4:ErrorCode='1']]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="ErrorCode_1ToLog4">
+                                    <tibex:DesignExpression>
+
+                                    <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                                    </bpws:source>
                                     </bpws:sources>
-                                    </bpws:reply>
-                                    <bpws:reply
-                                    name="ErrorCode2_3_4"
-                                    operation="post"
-                                    partnerLink="cercaarticolo"
-                                    portType="ns:cercaarticolo"
-                                    tibex:xpdlId="9a9437b9-22fc-4649-8a3f-5cd36061a8b4" variable="ErrorCode2_3_4-input">
-                                    <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns3="http://www.example.org/LackOfGoods" xmlns:tns4="http://xmlns.example.com/20211123175254PLT" xmlns:tns2="http://www.example.org/Storage" version="2.0"&gt;&lt;xsl:param name="LackOfGoods"/&gt;&lt;xsl:template name="ErrorCode2_3_4-input" match="/"&gt;&lt;tns4:postResponse&gt;&lt;Response&gt;&lt;tns2:Storage&gt;&lt;tns2:Lack&gt;&lt;tns2:LackMessage&gt;&lt;xsl:value-of select="$LackOfGoods/tns3:LackMessage"/&gt;&lt;/tns2:LackMessage&gt;&lt;/tns2:Lack&gt;&lt;/tns2:Storage&gt;&lt;/Response&gt;&lt;/tns4:postResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
-                                    <tibex:inputBindings>
-                                    <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/LackOfGoods&quot; xmlns:tns4=&quot;http://xmlns.example.com/20211123175254PLT&quot; xmlns:tns2=&quot;http://www.example.org/Storage&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;LackOfGoods&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorCode2_3_4-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:Storage>&#xa;            &lt;tns2:Lack>&#xa;                &lt;tns2:LackMessage>&#xa;                    &lt;xsl:value-of select=&quot;$LackOfGoods/tns3:LackMessage&quot;/>&#xa;                &lt;/tns2:LackMessage>&#xa;            &lt;/tns2:Lack>&#xa;        &lt;/tns2:Storage>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                                    </tibex:inputBindings>
-                                    <bpws:targets>
-                                    <bpws:target linkName="Log2ToReply1"/>
-                                    </bpws:targets>
                                     </bpws:reply>
                                     <bpws:extensionActivity>
                                     <tibex:extActivity
