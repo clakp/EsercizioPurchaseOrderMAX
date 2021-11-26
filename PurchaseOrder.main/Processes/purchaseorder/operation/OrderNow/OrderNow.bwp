@@ -2562,10 +2562,10 @@
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns5:jdbcQueryActivityInput"
-            name="QueryCh-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns6:resultSet" name="QueryCh" sca-bpel:internal="true"/>
+            name="QueryCa-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:resultSet" name="QueryCa" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:ActivityErrorData"
-            name="_error_QueryCh" sca-bpel:internal="true"/>
+            name="_error_QueryCa" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:OrderNowFunc" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
@@ -2874,7 +2874,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns14=&quot;http://www.example.org/ParamOrder&quot; xmlns:tns16=&quot;http://www.example.org/ShoppingChart&quot; xmlns:tns15=&quot;http://www.example.org/totalprice&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;QueryCh&quot;/>&lt;xsl:param name=&quot;TotalPrice&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns14:ParamOrderOut>&lt;tns14:OUT>&lt;xsl:for-each select=&quot;$QueryCh/Record&quot;>&lt;tns16:ShoppingBasket>&lt;xsl:if test=&quot;product&quot;>&lt;tns16:Product>&lt;xsl:value-of select=&quot;product&quot;/>&lt;/tns16:Product>&lt;/xsl:if>&lt;xsl:if test=&quot;price&quot;>&lt;tns16:Price>&lt;xsl:value-of select=&quot;price&quot;/>&lt;/tns16:Price>&lt;/xsl:if>&lt;xsl:if test=&quot;quantity&quot;>&lt;tns16:Quantity>&lt;xsl:value-of select=&quot;quantity&quot;/>&lt;/tns16:Quantity>&lt;/xsl:if>&lt;/tns16:ShoppingBasket>&lt;/xsl:for-each>&lt;tns16:Total>&lt;xsl:value-of select=&quot;sum($TotalPrice/tns15:prices)&quot;/>&lt;/tns16:Total>&lt;/tns14:OUT>&lt;/tns14:ParamOrderOut>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns14=&quot;http://www.example.org/ParamOrder&quot; xmlns:tns16=&quot;http://www.example.org/ShoppingChart&quot; xmlns:tns15=&quot;http://www.example.org/totalprice&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;QueryCa&quot;/>&#xa;    &lt;xsl:param name=&quot;TotalPrice&quot;/>&#xa;    &lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns14:ParamOrderOut>&#xa;            &lt;tns14:OUT>&#xa;                &lt;xsl:for-each select=&quot;$QueryCa/Record&quot;>&#xa;                    &lt;tns16:ShoppingBasket>&#xa;                        &lt;xsl:if test=&quot;product&quot;>&#xa;                            &lt;tns16:Product>&#xa;                                &lt;xsl:value-of select=&quot;product&quot;/>&#xa;                            &lt;/tns16:Product>&#xa;                        &lt;/xsl:if>&#xa;                        &lt;xsl:if test=&quot;price&quot;>&#xa;                            &lt;tns16:Price>&#xa;                                &lt;xsl:value-of select=&quot;price&quot;/>&#xa;                            &lt;/tns16:Price>&#xa;                        &lt;/xsl:if>&#xa;                        &lt;xsl:if test=&quot;quantity&quot;>&#xa;                            &lt;tns16:Quantity>&#xa;                                &lt;xsl:value-of select=&quot;quantity&quot;/>&#xa;                            &lt;/tns16:Quantity>&#xa;                        &lt;/xsl:if>&#xa;                    &lt;/tns16:ShoppingBasket>&#xa;                &lt;/xsl:for-each>&#xa;                &lt;tns16:Total>&#xa;                    &lt;xsl:value-of select=&quot;sum($TotalPrice/tns15:prices)&quot;/>&#xa;                &lt;/tns16:Total>&#xa;            &lt;/tns14:OUT>&#xa;        &lt;/tns14:ParamOrderOut>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2959,8 +2959,8 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="QueryCh-input"
-                    name="QueryCh" outputVariable="QueryCh"
+                <tibex:activityExtension inputVariable="QueryCa-input"
+                    name="QueryCa" outputVariable="QueryCa"
                     tibex:xpdlId="18bc64ba-5b9a-4bd2-a77a-6c8f86f06742" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="LogToLog1"/>
@@ -2969,9 +2969,9 @@
                         <bpws:source linkName="JDBCQueryToLog1">
                             <tibex:DesignExpression>
                                 <tibex:expression
-                                    expression="count($QueryCh/Record) > 0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    expression="count($QueryCa/Record) > 0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
-                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[count($QueryCh/Record) > 0]]></bpws:transitionCondition>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[count($QueryCa/Record) > 0]]></bpws:transitionCondition>
                         </bpws:source>
                         <bpws:source linkName="JDBCQueryToThrow">
                             <tibex:DesignExpression>
@@ -3250,7 +3250,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns18=&quot;http://tns.tibco.com/bw/activity/render/xsd/+5e5c09ab-ab5a-4fa1-be1c-cc134d9c4202+input&quot; xmlns:tns6=&quot;http://www.example.org/RenderOrder&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;QueryCh&quot;/>&#xa;    &lt;xsl:template name=&quot;Renderdata-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns18:Rows>&#xa;            &lt;xsl:for-each select=&quot;$QueryCh/Record&quot;>&#xa;                &lt;tns6:RenderOrder>&#xa;                    &lt;xsl:if test=&quot;product&quot;>&#xa;                        &lt;tns6:product>&#xa;                            &lt;xsl:value-of select=&quot;product&quot;/>&#xa;                        &lt;/tns6:product>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;price&quot;>&#xa;                        &lt;tns6:price>&#xa;                            &lt;xsl:value-of select=&quot;price&quot;/>&#xa;                        &lt;/tns6:price>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;quantity&quot;>&#xa;                        &lt;tns6:quantity>&#xa;                            &lt;xsl:value-of select=&quot;quantity&quot;/>&#xa;                        &lt;/tns6:quantity>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/tns6:RenderOrder>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns18:Rows>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns18=&quot;http://tns.tibco.com/bw/activity/render/xsd/+5e5c09ab-ab5a-4fa1-be1c-cc134d9c4202+input&quot; xmlns:tns6=&quot;http://www.example.org/RenderOrder&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;QueryCa&quot;/>&#xa;    &lt;xsl:template name=&quot;Renderdata-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns18:Rows>&#xa;            &lt;xsl:for-each select=&quot;$QueryCa/Record&quot;>&#xa;                &lt;tns6:RenderOrder>&#xa;                    &lt;xsl:if test=&quot;product&quot;>&#xa;                        &lt;tns6:product>&#xa;                            &lt;xsl:value-of select=&quot;product&quot;/>&#xa;                        &lt;/tns6:product>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;price&quot;>&#xa;                        &lt;tns6:price>&#xa;                            &lt;xsl:value-of select=&quot;price&quot;/>&#xa;                        &lt;/tns6:price>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;quantity&quot;>&#xa;                        &lt;tns6:quantity>&#xa;                            &lt;xsl:value-of select=&quot;quantity&quot;/>&#xa;                        &lt;/tns6:quantity>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/tns6:RenderOrder>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns18:Rows>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -3363,7 +3363,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns15=&quot;http://www.example.org/totalprice&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;QueryCh&quot;/>&lt;xsl:template name=&quot;Mapper1-input&quot; match=&quot;/&quot;>&lt;tns15:variousprices>&lt;xsl:for-each select=&quot;$QueryCh/Record&quot;>&lt;tns15:prices>&lt;xsl:value-of select=&quot;price*quantity&quot;/>&lt;/tns15:prices>&lt;/xsl:for-each>&lt;/tns15:variousprices>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns15=&quot;http://www.example.org/totalprice&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;QueryCa&quot;/>&#xa;    &lt;xsl:template name=&quot;Mapper1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns15:variousprices>&#xa;            &lt;xsl:for-each select=&quot;$QueryCa/Record&quot;>&#xa;                &lt;tns15:prices>&#xa;                    &lt;xsl:value-of select=&quot;price*quantity&quot;/>&#xa;                &lt;/tns15:prices>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns15:variousprices>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity

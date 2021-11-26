@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UpdateMag" xmlns:tns="http://www.example.org/UpdateMag" elementFormDefault="qualified">
+
+    <element name="UpdateMag" type="tns:UpdateMagType"></element>
+    
+    <complexType name="UpdateMagType">
+    	<sequence>
+    		<element name="product" type="string" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="quantity" type="int" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>

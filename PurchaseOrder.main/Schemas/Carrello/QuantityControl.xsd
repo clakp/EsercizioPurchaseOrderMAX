@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/QuantityControl" xmlns:tns="http://www.example.org/QuantityControl" elementFormDefault="qualified">
+
+    <element name="QC" type="tns:QCType"></element>
+    
+    <complexType name="QCType">
+    	<sequence>
+    		<element name="QuaCon" type="int" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>

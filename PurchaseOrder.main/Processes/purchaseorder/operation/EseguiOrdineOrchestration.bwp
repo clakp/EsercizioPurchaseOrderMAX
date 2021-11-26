@@ -336,7 +336,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="529"
+                                    <layoutConstraint x="627"
                                     xsi:type="notation:Bounds" y="151"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.log">
@@ -410,7 +410,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="456"
+                                    x="554"
                                     xsi:type="notation:Bounds" y="151"/>
                                     </children>
                                     <children type="4002">
@@ -515,7 +515,42 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
-                                    <layoutConstraint x="340"
+                                    <layoutConstraint x="472"
+                                    xsi:type="notation:Bounds" y="151"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint x="351"
                                     xsi:type="notation:Bounds" y="151"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -531,7 +566,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="407"
-                                    width="695" xsi:type="notation:Bounds"/>
+                                    width="1042" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -540,7 +575,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="372" width="698" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="407" width="704" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
@@ -1184,7 +1219,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="1328" width="698" x="1"
+                    <layoutConstraint height="1328" width="704" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1193,7 +1228,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="1380" width="1040" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="1380" width="1387" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1297,17 +1332,6 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
-            <bendpoints points="[25, 0, -69, 0]$[70, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
@@ -1315,8 +1339,30 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
             <bendpoints points="[25, 0, -91, 0]$[92, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[25, 0, -80, 0]$[81, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[25, 0, -96, 0]$[97, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1376,6 +1422,8 @@
         <bpws:variable element="ns0:ActivityInput" name="Log6-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:OrderNowFunc"
             name="EmptyThecart-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:ParamOrderOut"
+            name="UpdateWarehouse-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1624,8 +1672,9 @@
                 <bpws:link name="Log1ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="LogToCheckUsername" tibex:linkType="SUCCESS"/>
                 <bpws:link name="CheckUsernameToOrderNow" tibex:linkType="SUCCESS"/>
-                <bpws:link name="OrderNowToEmptyThecart" tibex:linkType="SUCCESS"/>
                 <bpws:link name="EmptyThecartToLog1" tibex:linkType="SUCCESS"/>
+                <bpws:link name="OrderNowToUpdateWarehouse" tibex:linkType="SUCCESS"/>
+                <bpws:link name="UpdateWarehouseToEmptyThecart" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1761,7 +1810,7 @@
                         <bpws:target linkName="CheckUsernameToOrderNow"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="OrderNowToEmptyThecart"/>
+                        <bpws:source linkName="OrderNowToUpdateWarehouse"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
@@ -1777,7 +1826,7 @@
                     tibex:xpdlId="68d40766-3611-4b96-aaf3-d825de652513"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="OrderNowToEmptyThecart"/>
+                        <bpws:target linkName="UpdateWarehouseToEmptyThecart"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="EmptyThecartToLog1"/>
@@ -1788,6 +1837,25 @@
                     </tibex:inputBindings>
                     <tibex:CallProcess
                         subProcessName="purchaseorder.operation.OrderNow.EmptyThecart" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="UpdateWarehouse-input"
+                    name="UpdateWarehouse"
+                    tibex:xpdlId="bce60b4a-cc84-427f-8a97-23198441dafb"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="OrderNowToUpdateWarehouse"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="UpdateWarehouseToEmptyThecart"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.org/ShoppingChart&quot; xmlns:tns7=&quot;http://www.example.org/ParamOrder&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;OrderNow&quot;/>&lt;xsl:template name=&quot;UpdateWarehouse-input&quot; match=&quot;/&quot;>&lt;tns7:ParamOrderOut>&lt;tns7:OUT>&lt;xsl:copy-of select=&quot;$OrderNow/tns7:OUT/tns6:ShoppingBasket&quot;/>&lt;/tns7:OUT>&lt;/tns7:ParamOrderOut>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        subProcessName="purchaseorder.operation.OrderNow.UpdateWarehouse" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
