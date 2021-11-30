@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/bankcall" xmlns:tns="http://www.example.org/bankcall" elementFormDefault="qualified">
+
+    <element name="Request1" type="tns:RequestType1"></element>
+
+
+
+    <complexType name="RequestType1">
+    	<sequence>
+    		<element name="Request" type="tns:RequestType"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RequestType">
+    	<sequence>
+    		<element name="conto" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="ReqMoney" type="decimal" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

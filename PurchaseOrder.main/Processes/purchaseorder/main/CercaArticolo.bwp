@@ -1662,13 +1662,13 @@
             name="CercaArticoloOrchestration1-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns2:Storage"
             name="CercaArticoloOrchestration1" sca-bpel:internal="true"/>
-        <bpws:variable element="ns20:ErrorLinkHandlerFaultData"
-            name="_error_CercaArticoloOrchestration1" sca-bpel:internal="true"/>
         <bpws:variable element="ns8:SleepInputSchema" name="Sleep-input" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns0:OptionalErrorReport"
             name="_errorOptional" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:ActivityInput" name="Log5-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns20:ErrorLinkHandlerFaultData"
+            name="_error_CercaArticoloOrchestration1" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
