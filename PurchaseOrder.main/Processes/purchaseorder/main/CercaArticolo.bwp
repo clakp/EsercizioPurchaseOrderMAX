@@ -29,6 +29,93 @@
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
     xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:VariableDescriptor type="MemorySaving">
+        <task name="pick">
+            <endingVariables>
+                <variable>post</variable>
+            </endingVariables>
+        </task>
+        <task name="postOut">
+            <endingVariables>
+                <variable>postOut-input</variable>
+                <variable>CercaArticoloOrchestration</variable>
+            </endingVariables>
+        </task>
+        <task name="Log">
+            <endingVariables>
+                <variable>Log-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log1">
+            <endingVariables>
+                <variable>Log1-input</variable>
+            </endingVariables>
+        </task>
+        <task name="CercaArticoloOrchestration">
+            <endingVariables>
+                <variable>CercaArticoloOrchestration-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log2">
+            <endingVariables>
+                <variable>Log2-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Sleep">
+            <endingVariables>
+                <variable>Sleep-input</variable>
+            </endingVariables>
+        </task>
+        <task name="InvokeRESTAPI">
+            <endingVariables>
+                <variable>InvokeRESTAPI-input</variable>
+                <variable>InvokeRESTAPI</variable>
+                <variable>RenderJSON</variable>
+            </endingVariables>
+        </task>
+        <task name="RenderJSON">
+            <endingVariables>
+                <variable>RenderJSON-input</variable>
+            </endingVariables>
+        </task>
+        <task name="SetSharedVariable">
+            <endingVariables>
+                <variable>SetSharedVariable-input</variable>
+                <variable>SetSharedVariable</variable>
+                <variable>GetSharedVariable</variable>
+            </endingVariables>
+        </task>
+        <task name="Log4">
+            <endingVariables>
+                <variable>Log4-input</variable>
+            </endingVariables>
+        </task>
+        <task name="ErrorCode_1">
+            <endingVariables>
+                <variable>ErrorCode_1-input</variable>
+            </endingVariables>
+        </task>
+        <task name="ErrorCode2_3_4">
+            <endingVariables>
+                <variable>ErrorCode2_3_4-input</variable>
+            </endingVariables>
+        </task>
+        <task name="TimeOut">
+            <endingVariables>
+                <variable>TimeOut-input</variable>
+            </endingVariables>
+        </task>
+        <task name="Log3">
+            <endingVariables>
+                <variable>Log3-input</variable>
+            </endingVariables>
+        </task>
+        <task name="GenericError">
+            <endingVariables>
+                <variable>GenericError-input</variable>
+            </endingVariables>
+        </task>
+    </tibex:VariableDescriptor>
     <tibex:Types>
         <xs:schema attributeFormDefault="unqualified"
             elementFormDefault="qualified"

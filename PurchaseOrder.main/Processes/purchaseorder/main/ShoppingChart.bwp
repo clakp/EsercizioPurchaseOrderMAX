@@ -12,6 +12,7 @@
     xmlns:ns4="http://www.example.org/ShoppingChart"
     xmlns:ns5="http://www.example.org/UsernameFault"
     xmlns:ns6="http://www.example.org/NotAvailable"
+    xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+6a441e81-41fb-442d-b2ce-d6c59f81063f"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -194,6 +195,21 @@
             </xs:complexType>
             <xs:element name="ActivityInput" type="tns:LogParametersType"/>
         </xs:schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+6a441e81-41fb-442d-b2ce-d6c59f81063f"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.example.org/NotAvailable"
+            xmlns:Q2="http://www.example.org/UsernameFault" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+6a441e81-41fb-442d-b2ce-d6c59f81063f">
+            <import namespace="http://www.example.org/UsernameFault"/>
+            <import namespace="http://www.example.org/NotAvailable"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:NotAvailable"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q2:UnFault"/>
+                </choice>
+            </complexType>
+        </schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20211125114540PLT"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
@@ -1003,6 +1019,9 @@
         <bpws:variable element="ns2:ActivityInput" name="Log4-input" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns1:operationResponse"
             name="Reply2-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:ActivityErrorData"
+            name="_error_CarrelloOrchestration" sca-bpel:internal="true"/>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>

@@ -1660,6 +1660,8 @@
         <bpws:variable element="ns12:resultSet" name="QueryMagUp" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:ActivityErrorData"
             name="_error_QueryMa" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:ActivityErrorData"
+            name="_error_QueryMag" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1882,9 +1884,7 @@
                     </tibex:config>
                 </tibex:activityExtension>
             </bpws:extensionActivity>
-            <bpws:scope name="Iterate" tibex:group="iterate"
-                tibex:indexOriginalName="index"
-                tibex:indexToGlobal="false" tibex:xpdlId="1999c565-88d7-41bc-8ff6-522004614d3b">
+            <bpws:scope name="Iterate" tibex:group="iterate" tibex:xpdlId="1999c565-88d7-41bc-8ff6-522004614d3b">
                 <bpws:targets>
                     <bpws:target linkName="QueryMagToIterate"/>
                 </bpws:targets>
@@ -1930,9 +1930,7 @@
                                     </bpws:targets>
                                 </bpws:empty>
                                 <bpws:scope name="Iterate1"
-                                    tibex:group="iterate"
-                                    tibex:indexOriginalName="index1"
-                                    tibex:indexToGlobal="false" tibex:xpdlId="a0d31b1d-cf77-463c-85f9-df6ea1894f06">
+                                    tibex:group="iterate" tibex:xpdlId="a0d31b1d-cf77-463c-85f9-df6ea1894f06">
                                     <bpws:targets>
                                     <bpws:target linkName="GroupStartToIterate1"/>
                                     </bpws:targets>
